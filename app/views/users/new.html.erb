@@ -1,0 +1,71 @@
+<% provide(:title, 'Sign up') %><html>
+<h7>Sign up</h7>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      
+      <%= form_for(@user) do |f| %>
+  
+          
+          <div class = "form_group">
+            <%= f.label :First_Name, :class => "control-label col-sm-4"%>
+            <div class="col-md-8">
+              <%= f.text_field :First_Name, :placeholder => "First Name", :class => "form-control col-sm-8" %>
+            </div>
+          </div>
+          
+          <div class = "form_group">
+            <%= f.label :Last_Name, :class => "control-label col-sm-4"%>
+            <div class="col-md-8">
+              <%= f.text_field :Last_Name, :placeholder => "Last Name", :class => "form-control col-sm-8" %>
+            </div>
+          </div>
+  
+          <div class = "form_group">
+            <%= f.label :Email, :class => "control-label col-sm-4" %>
+            <div class="col-md-8">
+              <%= f.email_field :Email, :placeholder => "Email", :class => "form-control col-sm-8" %>
+            </div>
+          </div>
+  
+          <div class = "form_group">
+            <%= f.label :Password, :class => "control-label col-sm-4" %>
+            <div class="col-md-8">
+              <%= f.password_field :Password, :placeholder => "Password", :class => "form-control col-sm-8" %>
+            </div>
+          </div>
+  
+          <div class = "form_group">
+            <%= f.label :password_confirmation, :class => "control-label col-sm-4" %>
+            <div class="col-md-8">
+              <%= f.password_field :password_confirmation, :placeholder => "Confirmation", :class => "form-control col-sm-8" %>
+            </div>
+          </div>
+          
+          
+          <div class = "form_group">
+            <div class="col-md-8">
+              <%= f.submit "create user", :class => "btn btn-primary" %>
+            </div>
+          </div>
+          
+          <br>
+          <br>
+          <br>
+          
+      <% end %>
+    </div>
+  </div>
+</div>
+</html>
+
+
+
+<script type="text/javascript">
+  $(document).ready(function(e){
+    $(".img-check").click(function(){
+      $(this).toggleClass("checked");
+    });
+  });
+</script>
