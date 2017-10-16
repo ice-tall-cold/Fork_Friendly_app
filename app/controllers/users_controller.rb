@@ -15,14 +15,14 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if @user.save
-            if params[:concerns]
-                params[:concerns].each_key do |k|
-                    @healthconcern = @user.health_concerns.create(name: k)
-                end
-            end
+            #if params[:concerns]
+            #    params[:concerns].each_key do |k|
+            #        @healthconcern = @user.health_concerns.create(name: k)
+            #    end
+            #end
             log_in @user
             flash[:success] = "Welcome to Fork-Friendly!"
-            redirect_back_or '/'
+            redirect_to 'https://google.com/'
         else
             
           render 'new'
@@ -61,7 +61,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:First_Name, :Last_Name, :Email, :Password,
-                                   :password_confirmation)
+                                   :password_confirmation, :Gender)
     end
     
     def logged_in_user
