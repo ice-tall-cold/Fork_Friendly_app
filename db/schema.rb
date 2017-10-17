@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20171010022603) do
 
   create_table "product_categories", force: :cascade do |t|
     t.integer "product_line_id"
-    t.string "names"
+    t.string "Name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_line_id"], name: "index_product_categories_on_product_line_id"
@@ -48,8 +48,7 @@ ActiveRecord::Schema.define(version: 20171010022603) do
     t.string "First_Name"
     t.string "Last_Name"
     t.string "Email"
-    t.string "Password"
-    t.string "password_confirmation"
+    t.string "password_digest"
     t.string "Gender"
     t.boolean "Admin"
     t.datetime "created_at", null: false
