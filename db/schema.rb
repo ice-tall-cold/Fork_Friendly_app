@@ -28,6 +28,27 @@ ActiveRecord::Schema.define(version: 20171010022603) do
 
   create_table "products", force: :cascade do |t|
     t.string "Name"
+    t.string "Company_Name"
+    t.text "Serving_Size"
+    t.float "Calories"
+    t.float "Sat_Fat"
+    t.float "Sodium"
+    t.float "Carbs"
+    t.float "Sugar"
+    t.float "Fiber"
+    t.float "Protein"
+    t.text "Whole_Grain"
+    t.text "twenty_cent"
+    t.text "Gluten_Free"
+    t.text "Organic"
+    t.text "Phosphorus"
+    t.text "Soy"
+    t.text "Potassium"
+    t.text "Milk"
+    t.text "Egg"
+    t.text "Nut"
+    t.text "FODMAP"
+    t.text "Additional_Info"
     t.integer "product_category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
