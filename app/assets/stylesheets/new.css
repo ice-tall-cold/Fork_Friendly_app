@@ -108,9 +108,25 @@ input[type=submit] {
 }
 
 
+/* for views/users/new */
+.control-label {
+	margin-left: 35px;
+}
 
 
+.form-control {
+	width: 80%;
+	margin-left: 35px;
+}
 
+#temp {
+	height: 400px;
+	width: 400px;
+	margin: 0 auto;
+	/*background-color: purple;*/
+	/*float: left;*/
+
+}
 
 
 
