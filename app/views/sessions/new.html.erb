@@ -1,19 +1,69 @@
-<% provide(:title, "Log in") %>
-<h1>Log in</h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+
+<div id="pageContainer">
+  <div id="topDiv"></div>
+  <div id="middleDiv">
+
+
     <%= form_for(:session, url: login_path) do |f| %>
+    <div id="centerOfPageContainer">
 
-      <%= f.label :Email %>
-      <%= f.email_field :Email, class: 'form-control' %>
+      <div class="middleCenterDivs"id="centerDiv1">
+        <p = class="divText" id="emailLabel"> <%= f.label :Email %> </p>
+      </div>
 
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+      <div class="middleCenterDivs" id="centerDiv2">
+        <%= f.email_field :Email, class: 'form-control' %>
+      </div>
 
-      <%= f.submit "Log in", class: "btn btn-primary", :id => 'log_in_submit' %>
+      <div class="middleCenterDivs" id="centerDiv3">
+        <p = class="divText" id="passwordLabel"> <%= f.label :password %> </p>
+      </div>
+
+      <div class="middleCenterDivs" id="centerDiv4">
+        <div id="arrowContainerDiv"> 
+          <p class="divText"> <%= f.submit ">", class: "btn btn-primary", :id => 'log_in_submit' %></p> 
+          <!--<p class="divText">></p>-->
+        </div>
+
+        <div id="passwordDiv">
+          <%= f.password_field :password, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="middleCenterDivs" id="centerDiv5">
+        <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+      </div>
+
+    </div>
     <% end %>
 
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+
   </div>
+  <div id="bottomDiv"></div>
 </div>
+
+
+
+      <!--<% provide(:title, "Log in") %>
+      <h1>Log in</h1>
+
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <%= form_for(:session, url: login_path) do |f| %>
+
+            <%= f.label :Email %><br>
+            <%= f.email_field :Email, class: 'form-control' %><br>
+
+            <%= f.label :password %><br>
+            <%= f.password_field :password, class: 'form-control' %>
+
+            <%= f.submit "Log in", class: "btn btn-primary", :id => 'log_in_submit' %>
+          <% end %>
+
+          <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+        </div>
+      </div>-->
+
+
+
