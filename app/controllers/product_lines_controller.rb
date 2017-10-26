@@ -32,7 +32,7 @@ class ProductLinesController < ApplicationController
     else
       flash[:success] = "File Imported"
 #      redirect_to chows_index_path               ##FIXME
-      redirect_to 'https://google.com/'
+      redirect_to health_concerns_new_path
     end
   end
   

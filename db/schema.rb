@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171010022603) do
+ActiveRecord::Schema.define(version: 20171026222505) do
+
+  create_table "health_concern_maps", force: :cascade do |t|
+    t.string "Calorie_Friendly"
+    t.string "Heart_Healthy"
+    t.string "Sodium_Friendly"
+    t.string "Carb_Friendly"
+    t.string "Kidney_Friendly"
+    t.string "Comments"
+    t.integer "product_category_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_category_id"], name: "index_health_concern_maps_on_product_category_id"
+  end
 
   create_table "product_categories", force: :cascade do |t|
     t.integer "product_line_id"

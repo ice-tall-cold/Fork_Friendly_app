@@ -17,4 +17,9 @@ Rails.application.routes.draw do
   resources :product_lines do
     collection { post :import }
   end
+  
+  get 'health_concerns/new'
+  resources :health_concerns do
+    collection { post :import }
+  end
 end
