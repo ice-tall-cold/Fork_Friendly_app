@@ -1,4 +1,3 @@
-
 <%= form_tag("/company", method: "get") do %>
     <% @arr.each do |a| %>
     <%= radio_button_tag(:product_category, a.to_s) %>
