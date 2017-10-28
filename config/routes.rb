@@ -22,4 +22,8 @@ Rails.application.routes.draw do
   resources :health_concerns do
     collection { post :import }
   end
+  
+  get 'health_concerns/concerns' => 'health_concerns#concerns'
+  post 'health_concerns/concerns' => 'health_concerns#create'
+  
 end

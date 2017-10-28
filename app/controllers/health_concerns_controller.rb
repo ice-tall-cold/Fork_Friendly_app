@@ -1,9 +1,31 @@
 class HealthConcernsController < ApplicationController
-  before_action :logged_in_user, only: [:new, :import]
+  before_action :logged_in_user, only: [:new, :import,:concerns,:create]
   before_action :is_admin, only: [:new, :import]
   
   def new
 
+  end
+  
+  def concerns
+
+  end
+  
+  def create
+    begin
+      HealthConcern.update_table(current_user.id,params[:concerns][:calorie_friendly],params[:concerns][:heart_healthy],params[:concerns][:sodium_friendly],params[:concerns][:carb_friendly],params[:concerns][:kidney_friendly])
+    rescue Exception => e
+      flash[:danger] = e.message
+#      redirect_to chows_new_path                 ##FIXME
+      redirect_to 'https://google.com/'
+    else
+      flash[:success] = "User Concerns updated"
+#      redirect_to chows_index_path               ##FIXME
+      redirect_to 'https://google.com/'
+    end
+  end
+  
+  def show
+    render health_concerns_concerns_path
   end
   
   def import

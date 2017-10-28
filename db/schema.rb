@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171026222505) do
+ActiveRecord::Schema.define(version: 20171026232511) do
 
   create_table "health_concern_maps", force: :cascade do |t|
     t.string "Calorie_Friendly"
@@ -23,6 +23,18 @@ ActiveRecord::Schema.define(version: 20171026222505) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_category_id"], name: "index_health_concern_maps_on_product_category_id"
+  end
+
+  create_table "health_concerns", force: :cascade do |t|
+    t.integer "Calorie_Friendly"
+    t.integer "Heart_Healthy"
+    t.integer "Sodium_Friendly"
+    t.integer "Carb_Friendly"
+    t.integer "Kidney_Friendly"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_health_concerns_on_user_id"
   end
 
   create_table "product_categories", force: :cascade do |t|
