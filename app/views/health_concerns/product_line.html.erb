@@ -1,0 +1,34 @@
+
+<%= form_tag("/product_category", method: "get") do %>
+<%= radio_button_tag(:product_line, "bread") %>
+<%= label_tag(:product_line_bread, "Bread") %>
+
+<%= radio_button_tag(:product_line, "Snacks") %>
+<%= label_tag(:product_line_snacks, "Snacks") %>
+
+<%= radio_button_tag(:product_line, "frozen") %>
+<%= label_tag(:product_line_frozen, "Frozen_Items") %>
+
+<%= radio_button_tag(:product_line, "Condiments") %>
+<%= label_tag(:product_line_condiments, "Condiments") %>
+
+<%= radio_button_tag(:product_line, "meats") %>
+<%= label_tag(:product_line_meats, "Meats") %>
+
+<%= radio_button_tag(:product_line, "Dairy") %>
+<%= label_tag(:product_line_dairy, "Dairy") %>
+
+<%= radio_button_tag(:product_line, "nuts") %>
+<%= label_tag(:product_line_nuts, "Nuts & Bread") %>
+
+<%= radio_button_tag(:product_line, "meals") %>
+<%= label_tag(:product_line_meals, "Meals Prepared") %>
+
+<%= radio_button_tag(:product_line, "drinks") %>
+<%= label_tag(:product_line_drinks, "Drinks") %>
+
+<%= radio_button_tag(:product_line, "produce") %>
+<%= label_tag(:product_line_produce, "Produce") %>
+
+<%= submit_tag("Search") %>
+<% end %>

@@ -1,0 +1,9 @@
+<h2>Add files to health concern diet map' database </h2>
+
+<center>
+    <%= form_tag import_health_concerns_path, multipart: true do %>
+        <%= file_field_tag :file, :id =>'Choose File' %>
+        <%= submit_tag("Import", :class => 'btn') %>
+<% end %>  
+<br>
+</center>
