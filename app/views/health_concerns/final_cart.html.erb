@@ -1,0 +1,9 @@
+<%= form_tag("/return", method: "get") do %>
+</div>Shopping Cart</div>
+    <% @length.each do |a| %>
+    <div>Product : <%= "#{@product[a]}" %></div>
+    <div>Company_Name : <%= "#{@company[a]}" %></div>
+    <div> ______________________________________________________________________________________________ </div>
+    <% end %>
+<%= submit_tag("Continue Shopping") %>
+<% end %>
