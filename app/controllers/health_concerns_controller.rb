@@ -1,17 +1,11 @@
 class HealthConcernsController < ApplicationController
-<<<<<<< HEAD
-  before_action :logged_in_user, only: [:new, :import,:concerns,:create]
-=======
+
   before_action :logged_in_user, only: [:new, :import,:concerns,:create,:product_line,:product_line_create]
->>>>>>> af63c5d71fbae03631277d505d3a202e8cda4d8a
   before_action :is_admin, only: [:new, :import]
   
   def new
 
   end
-  
-<<<<<<< HEAD
-=======
   
   def product_line
     
@@ -144,11 +138,7 @@ class HealthConcernsController < ApplicationController
     else
       flash[:success] = "User Concerns updated"
 #      redirect_to chows_index_path               ##FIXME
-<<<<<<< HEAD
-      redirect_to 'https://google.com/'
-=======
       redirect_to '/product_line'
->>>>>>> af63c5d71fbae03631277d505d3a202e8cda4d8a
     end
   end
   
@@ -183,8 +173,4 @@ class HealthConcernsController < ApplicationController
 
         redirect_to(root_url) unless current_user.Admin?
   end
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> af63c5d71fbae03631277d505d3a202e8cda4d8a

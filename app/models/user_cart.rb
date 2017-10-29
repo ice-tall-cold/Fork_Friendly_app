@@ -1,8 +1,6 @@
 class UserCart < ApplicationRecord
     belongs_to :product
     belongs_to :user
-<<<<<<< HEAD
-=======
     
       def self.update_cart(user_id,product_id,active)
      begin
@@ -13,7 +11,4 @@ class UserCart < ApplicationRecord
   end
   
   
-  
-  
->>>>>>> af63c5d71fbae03631277d505d3a202e8cda4d8a
 end
