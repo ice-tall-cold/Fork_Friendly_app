@@ -40,6 +40,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
     gem 'database_cleaner'
     gem 'rspec-rails'
+    gem 'rails-controller-testing'
     gem 'factory_girl_rails', :require => false
     gem 'cucumber-rails', :require => false
   gem 'selenium-webdriver'
