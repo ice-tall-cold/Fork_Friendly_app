@@ -8,18 +8,18 @@ describe SessionsController do
     describe 'create' do
         context 'when given a valid user' do
             before do
-                get :create, { :session => { :email => "willyman_ina_can@mailman.com", 
-                                            :password => "passw0rd" } } 
+                get :create, { :session => {:Email => "sankeerth@tamu.edu", 
+                                            :password => "password" } } 
             end
            
             it 'should redirect with user logged in' do
-                response.should redirect_to '/'
+                response.should render_template("userHome") 
             end
         end
         
         context 'when given an invalid user' do
             before do
-                get :create, { :session => { :email => "not_in_database@email.com", 
+                get :create, { :session => { :Email => "not_in_database@email.com", 
                                             :password => "this gonna fail" } } 
             end
            
