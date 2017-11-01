@@ -22,7 +22,7 @@ class UsersController < ApplicationController
             #end
             log_in @user
             flash[:success] = "Welcome to Fork-Friendly!"
-            redirect_to 'https://google.com/'
+            redirect_to '/login'
         else
             
           render 'new'
