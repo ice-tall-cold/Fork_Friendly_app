@@ -123,6 +123,9 @@ class HealthConcernsController < ApplicationController
       render 'company' 
  end
   
+
+#>>>>>>> af63c5d71fbae03631277d505d3a202e8cda4d8a
+
   def concerns
 
   end

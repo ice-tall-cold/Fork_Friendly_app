@@ -1,0 +1,140 @@
+#containerPL {
+	background-image:url(bg.jpg);
+	height: 100%;
+	min-width:900px;
+	max-width:1800px;
+	border: 1px solid red;
+	margin: 0 auto;
+}
+
+#topDiv {
+	height: 300px;
+	margin: 5px;
+	margin: 0 auto;
+	/*border: 2px solid red;*/
+}
+
+h1.divText {
+	font-family: Garamond;
+	font-size: 200%;
+	color: green;
+	position: relative;
+	margin: 0;
+	text-align: center;
+	top: 50%;
+	transform: translateY(150%);
+}
+
+#middleDivPL {
+
+	height: 500px;
+	min-width: 900px;
+	max-width: 1800px;
+	margin: 0 auto;
+	white-space: nowrap;
+}
+
+#centerOfPageContainerPL {
+	border: 5px solid white;
+	height: 500px;
+	width: 1050px;
+	margin: 0 auto;
+	/*background-color: purple;*/
+	/*float: left;*/
+
+}
+
+#bottomDivPL{
+	height: 300px;
+	min-width: 900px;
+	max-width: 1800px;
+	margin: 0 auto;
+	white-space: nowrap;
+}
+
+#outerDivPL {
+	border: 2px solid transparent;
+	width: 200px;
+	height: 150px;
+	float: left;
+	margin-left: 5px; /*is 5px when you add the border*/
+	margin-top: 20px;
+	margin-bottom: 20px;
+	position: relative;
+	white-space: nowrap;
+}
+
+
+.picDivPL {
+	background-size: 100%;
+
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	im
+}
+
+#breadDiv {
+	background-image:url(bakery.jpg);
+}
+
+#frozenDiv {
+	background-image:url(_frozen_food.png)
+}
+
+#snacksDiv {
+	background-image:url(_snacks.png)
+}
+
+#condimentsDiv {
+	background-image:url(_condiment.png);
+}
+
+#meatsDiv {
+	background-image:url(_meat.png);
+}
+
+#dairyDiv {
+	background-image:url(milk.jpg);
+}
+
+#nutsDiv {
+	background-image:url(_nuts_and_seeds.png);
+}
+#mealsDiv {
+	background-image:url(_meals_prepared.png);
+}
+#drinksDiv {
+	background-image:url(_drinks.png);
+}
+#produceDiv {
+	background-image:url(_fruit.png);
+}
+
+
+#labelDivPL {
+	border: 2px solid transparent;
+	width: 180px;
+	height: 20px;
+	margin: 0 auto;
+	margin-top: 10px;
+	color: green;
+	text-align: center;
+}
+
+
+#outerSubmitDiv {
+	/*border: 1px solid red;*/
+	float: left;
+	width: 100%;
+}
+
+#submitDiv {
+	/*border: 1px solid blue;*/
+	color: white;
+	margin: 0 auto;
+	height: 80px;
+	width: 40%;
+	font-size: 20px;
+}
+
