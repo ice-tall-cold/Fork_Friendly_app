@@ -17,13 +17,13 @@
                     <div id="outerDiv">
                       
                         <div id="picOuterDiv">
-                          <%= f.label :calorie_friendly, "...:", class: "label" do %>
+                          <%= f.label :sodium_friendly, "...:", class: "label" do %>
                           <div id="picDiv"> <img src=<%=image_url('concerns/salt.png')%> alt="..." id="image">  </div>                         
                           
                         </div>
 
                         <div id="labelDiv">
-                          <%= f.check_box :calorie_friendly, class: "checkbox", id: "ck"%>
+                          <%= f.check_box :sodium_friendly, class: "checkbox", id: "ck"%>
                           <h5>Salt Shy</h5>
                         </div>
                         <% end %>
@@ -50,12 +50,12 @@
 
                     <div id="outerDiv">
                         <div id="picOuterDiv">
-                          <%= f.label :sodium_friendly, "...:", class: "label" do %>
+                          <%= f.label :calorie_friendly, "...:", class: "label" do %>
                           <div id="picDiv"><img src=<%=image_url('concerns/fork.png')%> alt="..." class="img-responsive"></div>
                         </div>
 
                         <div id="labelDiv">
-                          <%= f.check_box :sodium_friendly, class: "checkbox", id: "ck" %>
+                          <%= f.check_box :calorie_friendly, class: "checkbox", id: "ck" %>
                           <h5>Wieght Loss</h5>
                         </div>
                         <% end %>

@@ -68,7 +68,7 @@ class HealthConcernsController < ApplicationController
 
  def company
       p_l = ProductCategory.find_by Name: params[:product_category]   
-      produt=Product.where product_category_id: p_l.id
+      produt_database=Product.where product_category_id: p_l.id
       @Name=[]
       @product_id =[]
       @Company_Name =[]
@@ -92,7 +92,23 @@ class HealthConcernsController < ApplicationController
       @FODMAP =[]
       @Additional_Info =[]
       @id =[]
-      len = produt.length
+      len = produt_database.length
+      user_cncern_list = HealthConcern.where user_id: current_user.id
+      if user_cncern_list[0].Calorie_Friendly ==1
+        user_cncern = "Calorie_Friendly"
+      elsif user_cncern_list[0].Heart_Healthy ==1
+        user_cncern = "Heart_Healthy"
+      elsif user_cncern_list[0].Sodium_Friendly ==1
+        user_cncern = "Sodium_Friendly"
+      elsif user_cncern_list[0].Carb_Friendly ==1
+        user_cncern = "Carb_Friendly"
+      elsif user_cncern_list[0].Kidney_Friendly ==1
+        user_cncern = "Kidney_Friendly"
+      end
+      cncern_map = HealthConcernMap.where product_category_id: p_l.id
+      srt_by = cncern_map[0][user_cncern]
+      concern_acronym = {"LS" => "Sodium","LSF" => "Sat_Fat","Lcal" => "Carbs"}
+      produt = produt_database.sort_by { |k| k[concern_acronym[srt_by]]}
       $i =0
       while $i < len.to_i do
       @Name.push( produt[$i].Name.to_s)
@@ -123,8 +139,6 @@ class HealthConcernsController < ApplicationController
       render 'company' 
  end
   
-
-#>>>>>>> af63c5d71fbae03631277d505d3a202e8cda4d8a
 
   def concerns
 

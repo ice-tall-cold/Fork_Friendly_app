@@ -3,17 +3,19 @@ class HealthConcernMap < ApplicationRecord
     
   def self.import(file)
     spreadsheet = open_spreadsheet(file)
-    product_header = ["Calorie_Friendly","Heart_Healthy","Sodium_Friendly","Carb_Friendly","Kidney_Friendly","Comments","product_category_id"]
-    (2..spreadsheet.last_row).each do |i|
+    product_header = ["Category_Name","Calorie_Friendly","Heart_Healthy","Sodium_Friendly","Carb_Friendly","Kidney_Friendly","Comments","product_category_id"]
+    last_row = spreadsheet.last_row+1
+    (2..last_row).each do |i|
     begin
       first_cell = spreadsheet.cell(i, 1) #Bacon
       p_c = ProductCategory.find_by Name: first_cell #first search in prod cat table
       h_c = HealthConcernMap.find_by product_category_id:  p_c.id #second search in health convert table
       row = Hash[[product_header, spreadsheet.row(i).first(product_header.size-1)+[p_c.id]].transpose]    #.row(i) error with new format
+      row = row.except("Category_Name")
       if h_c
-        h_c = HealthConcernMap.update_attributes row
+        h_c.update_attributes row
       else
-        h_c = HealthConcernMap.create row 
+        h_c = HealthConcernMap.create row
       end
     end
   end
