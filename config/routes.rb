@@ -32,5 +32,6 @@ Rails.application.routes.draw do
   get 'cart'  => 'health_concerns#update_cart'
   get 'final_cart' => 'health_concerns#final_cart'
   get 'return' => 'health_concerns#continue'
+  get 'modify_cart' => 'health_concerns#modify_cart'
 
 end

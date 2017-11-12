@@ -2,7 +2,7 @@ class HealthConcernsController < ApplicationController
 
   before_action :logged_in_user, only: [:new, :import,:concerns,:create,:product_line,:product_line_create]
   before_action :is_admin, only: [:new, :import]
-  
+  @to_remove = []
   def new
 
   end
@@ -24,10 +24,24 @@ class HealthConcernsController < ApplicationController
         redirect_to 'https://google.com/'
       else
         flash[:success] = "User Concerns updated"
-        redirect_to '/final_cart'
+        redirect_to '/company'
     end   
   end
   
+  def modify_cart
+    begin
+        p_id = params[:compny]
+        user_cart_data = UserCart.where user_id: current_user.id
+        item_remove = user_cart_data.find_by product_id: p_id
+        item_remove.destroy
+      rescue Exception => e
+        flash[:danger] = e.message
+        redirect_to 'https://google.com/'
+      else
+        flash[:success] = "User Concerns updated"
+        redirect_to '/final_cart'
+    end
+  end
   
   def final_cart
     product_cart = UserCart.where user_id: current_user.id
@@ -36,6 +50,7 @@ class HealthConcernsController < ApplicationController
     $j =0
     @arr =[]
     @product =[]
+    @product_id =[]
     @company =[]
     @length =[]
     while $i < len
@@ -47,9 +62,10 @@ class HealthConcernsController < ApplicationController
     while $j < len
       @product.push(@arr[$j].Name)
       @company.push(@arr[$j].Company_Name)
+      @product_id.push(@arr[$j].id.to_i)
       @length.push($j)
      $j+=1
-    end 
+    end
     render 'final_cart'
   end
   
@@ -67,7 +83,12 @@ class HealthConcernsController < ApplicationController
   end
 
  def company
-      p_l = ProductCategory.find_by Name: params[:product_category]   
+      if params[:product_category] != nil 
+        p_l = ProductCategory.find_by Name: params[:product_category]
+        session[:product_category] = p_l
+      else
+        p_l = session[:product_category]
+      end
       produt_database=Product.where product_category_id: p_l.id
       @Name=[]
       @product_id =[]
