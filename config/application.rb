@@ -34,7 +34,7 @@ module ForkFriendly
         
       g.fixture_replacement :factory_girl, :dir => "spec/factories"
     end
-    config.active_record.raise_in_transactional_callbacks = true
+    #config.active_record.raise_in_transactional_callbacks = true
     config.exceptions_app = self.routes
   end
 end
