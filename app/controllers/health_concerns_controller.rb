@@ -86,10 +86,12 @@ class HealthConcernsController < ApplicationController
       if params[:product_category] != nil 
         p_l = ProductCategory.find_by Name: params[:product_category]
         session[:product_category] = p_l
+        p_l_id = p_l["id"]
       else
         p_l = session[:product_category]
+        p_l_id = p_l["id"]
       end
-      produt_database=Product.where product_category_id: p_l.id
+      produt_database=Product.where product_category_id: p_l_id
       @Name=[]
       @product_id =[]
       @Company_Name =[]
@@ -126,7 +128,7 @@ class HealthConcernsController < ApplicationController
       elsif user_cncern_list[0].Kidney_Friendly ==1
         user_cncern = "Kidney_Friendly"
       end
-      cncern_map = HealthConcernMap.where product_category_id: p_l.id
+      cncern_map = HealthConcernMap.where product_category_id: p_l_id
       srt_by = cncern_map[0][user_cncern]
       concern_acronym = {"LS" => "Sodium","LSF" => "Sat_Fat","Lcal" => "Carbs"}
       produt = produt_database.sort_by { |k| k[concern_acronym[srt_by]]}
