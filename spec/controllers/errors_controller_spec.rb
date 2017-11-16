@@ -15,5 +15,4 @@ RSpec.describe ErrorsController, type: :controller do
       expect(response.status).to eq(500)
     end
   end
-
 end

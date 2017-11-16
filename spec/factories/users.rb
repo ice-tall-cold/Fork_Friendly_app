@@ -2,19 +2,16 @@ FactoryGirl.define do
   factory :user do
       First_Name 'Ashok'
       Last_Name 'kumar'
-      Email 'Ashok@tamu.edu'
       password 'password'
       password_confirmation 'password'
       Gender 'Male'
       Admin true
-  end
-  factory :user_not_valid do
-      First_Name 'Ashok'
-      Last_Name 'kumar'
-      Email 'Ashok.edu'
-      password 'pass'
-      password_confirmation 'pass'
-      Gender 'Male'
-      Admin true
+      factory :valid_user do
+        Email 'Ashok@tamu.edu'
+      end
+      factory :invalid_user do
+        Email 'Ashok'
+      end
+      
   end
 end
