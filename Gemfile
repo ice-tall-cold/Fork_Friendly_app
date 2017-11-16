@@ -41,6 +41,7 @@ group :development, :test do
     gem 'database_cleaner'
     gem 'autotest-rails'
     gem 'factory_girl_rails', :require => false
+    gem "factory_girl", "~> 4.0"
     gem 'rspec-rails'
     gem 'rails-controller-testing'
   gem 'cucumber-rails', :require => false

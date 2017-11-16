@@ -297,6 +297,7 @@ DEPENDENCIES
   cucumber-rails
   cucumber-rails-training-wheels
   database_cleaner
+  factory_girl (~> 4.0)
   factory_girl_rails
   faker
   guard-rspec

@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'spec_helper'
 
 describe UsersController do
     before do
@@ -9,57 +10,33 @@ describe UsersController do
         before do
             get :new
         end
+        
         it 'should make a default user' do
             assigns(:user).should_not == nil
         end
     end
     
-    describe 'create' do
-        context 'when given given a valid user' do
+    describe 'GET #create' do
+        context 'when given given a valid user and health conserns' do
             before do
                User.destroy_all
                load "#{Rails.root}/db/seeds.rb"
-               
-               @abc = User.create(First_Name: 'Paul', Last_Name: 'Hawk', Email: 'paulmikehawk@ogmail.com',password: 'passw0rd',password_confirmation: 'passw0rd', Gender: 'Male',Admin: false)
-
-               #get(:create, 
-               #{:user => {:First_Name => "Paul", :Last_Name => "Hawk", 
-               #         :Email => "paulmikehawk@ogmail.com", 
-               #         :password => "passw0rd", :password_confirmation=> "passw0rd", :Gender => "Male"}})
+               #user = build(:user)
+               get :create, params: {:user => attributes_for(:user)}
             end
        
             it 'should make and save a proper user' do
-               
-               #abc.First_Name.should == "Paul";
-               expect(@abc.First_Name).to eq("Paul")
-               
-               #new_user = User.find_by(First_Name: 'Paul')
-               
-               #expect("nil").to eq(new_user)
+               new_user = User.find_by(First_Name: 'Ashok')
+               expect(new_user.First_Name).to eq attributes_for(:user)[:First_Name]
             end
            
             it 'should set a welcome message and redirect' do
-               #expect(flash[:success]).to eq "Welcome to Fork-Friendly!"
-               expect(flash[:success]).to eq nil
-              # response.should redirect_to 'https://google.com/'   #fixme
+
+               response.should redirect_to '/login'
             end
             
         end
         
-        context 'when given a invalid user' do
-            before do
- @abc1 = User.create(First_Name: 'Tonka', Last_Name: 'Dan', Email: 'tonka_the_tank_engine@m',password: 'passw0rd',password_confirmation: 'passw0rd', Gender: 'Male',Admin: false)
-
-              # get(:create, 
-               #{:user => {:First_Name => 'Tonka', :Last_Name => 'Dan', 
-                #        :Email => 'tonka_the_tank_engine@m', 
-                 #       :password => 'passw0rd', :password_confirmation => 'passw0rd', :Gender => "Male"}})
-            end
-            
-            it 'should rerender the page' do
-                response.should render_template(nil)
-            end
-        end
     end
     
     # describe 'edit' do
@@ -91,9 +68,5 @@ describe UsersController do
     #     it 'should set user for display' do
     #         assigns(:user).should_not == nil
     #     end
-    # end
-    
-   
-
-
 end
+    # end
