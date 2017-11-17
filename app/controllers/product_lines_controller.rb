@@ -24,6 +24,7 @@ class ProductLinesController < ApplicationController
   
   def import
     begin
+      debugger
       ProductLine.import(params[:file])
     rescue Exception => e
       flash[:danger] = e.message
