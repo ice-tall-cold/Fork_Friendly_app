@@ -16,11 +16,6 @@ class ProductLinesController < ApplicationController
   #   index
   # end
   
-  def index
-    @concerns = params[:concerns]
-    
-    render "index"
-  end
   
   def import
     begin
@@ -35,41 +30,7 @@ class ProductLinesController < ApplicationController
       redirect_to health_concerns_new_path
     end
   end
-  
-  def list
-    @user = User.find(session[:user_id])
-    @items = @user.chows
-  end
-  
-  def destroy
-    Chow.find(params[:id]).destroy
-    flash[:success] = "Item deleted"
-    redirect_to chows_index_path
-  end
-  
-  def return_subs
-    @subs = Category.where(name: params[:category]).pluck(:subcategory)
-    
-    if @subs
-      render json: @subs
-    else
-      redirect_to not_found
-    end
-  end
-  
-  def return_chows
-    @food_type = (Category.where(name: params[:cat])).find_by(subcategory: params[:sub])
-    @food = @food_type.chows
-    render json: @food
-  end
-  
-  def add_to_shoping_list
-    @user = User.find(session[:user_id])
-    
-    @user.chows << Chow.find(params[:food])
-    
-    render json: ""
-  end
+
   
   private
   def logged_in_user
