@@ -7,6 +7,7 @@ describe HealthConcernsController do
             before do
                User.destroy_all
                load "#{Rails.root}/db/seeds.rb"
+               session[:user_id] = 1
                get(:create, 
                params: {:concerns => {:calorie_friendly => 1, :heart_healthy => 0, :sodium_friendly => 0, :carb_friendly => 0, :kidney_friendly => 0}})
             end

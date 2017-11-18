@@ -8,6 +8,7 @@ describe ProductLinesController do
                 file = Rack::Test::UploadedFile.new(test_csv, "text/xlsx")
                 puts test_csv
                 puts file
+                session[:user_id] = 1
                 post :import, params: {:file => file }
             end
             
