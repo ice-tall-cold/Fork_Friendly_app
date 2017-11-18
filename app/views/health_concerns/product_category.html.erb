@@ -1,0 +1,8 @@
+<%= link_to "My Cart", final_cart_path %></p>
+<%= form_tag("/company", method: "get") do %>
+    <% @arr.each do |a| %>
+    <%= radio_button_tag(:product_category, a.to_s) %>
+    <%= label_tag(:product_category, a.to_s) %>      
+    <% end %>
+<%= submit_tag("Search") %>
+<% end %>

@@ -1,0 +1,105 @@
+<div id="containerPL">
+
+	<div id="topDiv">
+      <h1 class="divText">Start Shopping!</h1>
+      <%= link_to "My Cart", final_cart_path %></p>
+    </div>
+
+
+    <div id="middleDivPL">
+
+		<%= form_tag("/product_category", method: "get") do %>
+
+			<div id="centerOfPageContainerPL">
+
+				<div id="outerDivPL">
+					<div class="picDivPL" id="breadDiv"></div>
+					<div id="labelDivPL">
+						<%= radio_button_tag(:product_line, "bread") %>
+						<%= label_tag(:product_line_bread, "Bread") %>
+					</div>
+				</div>
+
+				<div id="outerDivPL">
+					<div class="picDivPL" id="snacksDiv"></div>
+					<div id="labelDivPL">
+						<%= radio_button_tag(:product_line, "Snacks") %>
+						<%= label_tag(:product_line_snacks, "Snacks") %>
+					</div>
+				</div>
+
+				<div id="outerDivPL">
+					<div class="picDivPL" id="frozenDiv"></div>
+					<div id="labelDivPL">
+						<%= radio_button_tag(:product_line, "frozen") %>
+						<%= label_tag(:product_line_frozen, "Frozen_Items") %>
+					</div>
+				</div>
+
+				<div id="outerDivPL">
+					<div class="picDivPL" id="condimentsDiv"></div>
+					<div id="labelDivPL">
+						<%= radio_button_tag(:product_line, "Condiments") %>
+						<%= label_tag(:product_line_condiments, "Condiments") %>
+					</div>
+				</div>
+
+				<div id="outerDivPL">
+					<div class="picDivPL" id="meatsDiv"></div>
+					<div id="labelDivPL">
+						<%= radio_button_tag(:product_line, "Meat") %>
+						<%= label_tag(:product_line_meats, "Meats") %>
+					</div>
+				</div>
+
+				<div id="outerDivPL">
+					<div class="picDivPL" id="dairyDiv"></div>
+					<div id="labelDivPL">
+						<%= radio_button_tag(:product_line, "Dairy") %>
+						<%= label_tag(:product_line_dairy, "Dairy") %>
+					</div>
+				</div>
+
+				<div id="outerDivPL">
+					<div class="picDivPL" id="nutsDiv"></div>
+					<div id="labelDivPL">
+						<%= radio_button_tag(:product_line, "nuts") %>
+						<%= label_tag(:product_line_nuts, "Nuts & Bread") %>
+					</div>
+				</div>
+
+				<div id="outerDivPL">
+					<div class="picDivPL" id="mealsDiv"></div>
+					<div id="labelDivPL">
+						<%= radio_button_tag(:product_line, "meals") %>
+						<%= label_tag(:product_line_meals, "Meals Prepared") %>
+					</div>
+				</div>
+
+				<div id="outerDivPL">
+					<div class="picDivPL" id="drinksDiv"></div>
+					<div id="labelDivPL">
+						<%= radio_button_tag(:product_line, "drinks") %>
+						<%= label_tag(:product_line_drinks, "Drinks") %>
+					</div>
+				</div>
+
+				<div id="outerDivPL">
+					<div class="picDivPL" id="produceDiv"></div>
+					<div id="labelDivPL">
+						<%= radio_button_tag(:product_line, "produce") %>
+						<%= label_tag(:product_line_produce, "Produce") %>
+					</div>
+				</div>
+
+				<div id="outerSubmitDiv">
+					<div id="submitDiv"><%= submit_tag("Search") %></div>
+				</div>
+
+			</div>
+		<% end %>
+
+	</div>
+
+	<div id="bottomDivPL"></div>
+</div>

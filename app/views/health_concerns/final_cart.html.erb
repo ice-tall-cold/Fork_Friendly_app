@@ -1,0 +1,11 @@
+<%= form_tag("/modify_cart", method: "get") do %>
+</div>Shopping Cart</div>
+    <% @length.each do |a| %>
+    <div>Product : <%= "#{@product[a]}" %></div>
+    <div>Company_Name : <%= "#{@company[a]}" %></div>
+    <%= radio_button_tag(:compny, @product_id[a]) %>
+    <%= label_tag(:compny, "Remove") %>
+    <div> ______________________________________________________________________________________________ </div>
+    <% end %>
+<%= submit_tag("Update cart") %>
+<% end %>

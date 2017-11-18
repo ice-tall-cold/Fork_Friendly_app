@@ -1,0 +1,2 @@
+module HealthConcernsHelper
+end
