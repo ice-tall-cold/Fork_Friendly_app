@@ -5,7 +5,7 @@ describe HealthConcernsController do
      describe 'GET #concerns' do
         context 'when given given a valid user health conserns' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 1
                get(:concerns )
               User.destroy_all
@@ -20,7 +20,7 @@ describe HealthConcernsController do
     describe 'GET #create' do
         context 'Method called post concerns' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 1
                get(:create, 
                params: {:concerns => {:calorie_friendly => 1, :heart_healthy => 0, :sodium_friendly => 0, :carb_friendly => 0, :kidney_friendly => 0}})
@@ -34,7 +34,7 @@ describe HealthConcernsController do
     describe 'GET #show' do
         context 'Show Method HealthConcerns' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 1
             end
             it 'render the path' do
@@ -47,7 +47,7 @@ describe HealthConcernsController do
     describe 'GET #continue' do
         context 'Continue Method HealthConcerns' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 1
             end
             it 'render the path' do
@@ -60,7 +60,7 @@ describe HealthConcernsController do
     describe 'GET #product_line' do
         context 'Method product_line' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 1
                get(:product_line)
             end
@@ -73,7 +73,7 @@ describe HealthConcernsController do
     describe 'GET #product_category' do
         context 'Method product_category' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 1
             end
             it 'post view go to product_category' do
@@ -86,7 +86,7 @@ describe HealthConcernsController do
     describe 'GET #company_1' do
         context 'Method company' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 1
                get(:company, params: {:product_category => "Yogurt"})
             end
@@ -99,7 +99,7 @@ describe HealthConcernsController do
    describe 'GET #company_2' do
         context 'Method company' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 2
                get(:company, params: {:product_category => "Yogurt_1"})
             end
@@ -112,7 +112,7 @@ describe HealthConcernsController do
    describe 'GET #company_3' do
         context 'Method company' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 3
                get(:company, params: {:product_category => "Yogurt_2"})
             end
@@ -125,7 +125,7 @@ describe HealthConcernsController do
        describe 'GET #company_4' do
         context 'Method company' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 4
                get(:company, params: {:product_category => "Yogurt_3"})
             end
@@ -138,7 +138,7 @@ describe HealthConcernsController do
     describe 'GET #company_5' do
         context 'Method company' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 5
                get(:company, params: {:product_category => "Yogurt_4"})
             end
@@ -151,7 +151,7 @@ describe HealthConcernsController do
     describe 'GET #updaate_cart' do
         context 'Method update_cart' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 1
             end
             it 'update cart with pid 52' do
@@ -164,7 +164,7 @@ describe HealthConcernsController do
     describe 'GET #final_cart' do
         context 'Method final_cart' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 1
             end
             it 'get final_cart and render the view' do
@@ -177,7 +177,7 @@ describe HealthConcernsController do
     describe 'GET #modify_cart' do
         context 'Method modify' do
             before do
-               load "#{Rails.root}/db/seeds.rb"
+               load "#{Rails.root}/db/seeds_1.rb"
                session[:user_id] = 1
             end
             it 'get final_cart and render the view' do
