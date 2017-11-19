@@ -187,4 +187,49 @@ describe HealthConcernsController do
         end
     end 
     
+    describe 'GET #import' do
+        context "successfully importing files" do
+            before do
+                User.destroy_all
+                load "#{Rails.root}/db/seeds_1.rb"
+                session[:user_id] = 1
+                test_csv = Rails.root.join('spec', 'concerns_map_test.xlsx')
+                file = Rack::Test::UploadedFile.new(test_csv, "text/xlsx")
+                puts test_csv
+                puts file
+                post :import, params: {:file => file }
+            end
+            
+            it 'should indicate success' do
+                expect(flash[:success]).to eq "File Imported"
+            end
+            
+            it 'should redirect to the appropriate page' do
+                response.should redirect_to 'https://google.com/'
+            end
+        end
+        
+        context 'unsuccsessfully importing files' do
+            before do
+                User.destroy_all
+                load "#{Rails.root}/db/seeds.rb"
+                session[:user_id] = 1
+                test_csv = Rails.root.join('spec', 'Iteration_0.docx')
+                file = Rack::Test::UploadedFile.new(test_csv, "text/xlsx")
+                puts test_csv
+                puts file
+                post :import, params: {:file => file }
+            end
+            
+            it 'should indicate failure' do
+                expect(flash[:danger]).to eq "Unknown file type: Iteration_0.docx"
+            end
+            
+            it 'should redirect accordingly' do
+               response.should redirect_to 'https://google.com/' 
+            end
+        end
+    end
+    
+    
 end
