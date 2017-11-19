@@ -11,6 +11,7 @@ user_table1 = User.create(First_Name: 'Sa', Last_Name: 'sankeert', Email: 'ankee
 user_table2 = User.create(First_Name: 'S', Last_Name: 'ankeert', Email: 'nkeerth@tamu.edu',password: 'password',password_confirmation: 'password', Gender: 'Male',Admin: true)
 user_table3 = User.create(First_Name: 'Sa', Last_Name: 'snkeert', Email: 'keerth@tamu.edu',password: 'password',password_confirmation: 'password', Gender: 'Male',Admin: true)
 user_table4 = User.create(First_Name: 'Sa', Last_Name: 'sakeert', Email: 'eerth@tamu.edu',password: 'password',password_confirmation: 'password', Gender: 'Male',Admin: true)
+user_table5 = User.create(First_Name: 'Soy', Last_Name: 'sonkeerth', Email: 'sonkeerth@tamu.edu',password: 'password',password_confirmation: 'password', Gender: 'Male',Admin: true)
 
 
 
@@ -43,6 +44,5 @@ map_1 =  HealthConcernMap.create( Calorie_Friendly: "LS", Heart_Healthy: 'LS', S
 
 cart = UserCart.create( user_id: 1, product_id: 52, active: true)
 prod = Product.create(id: 52, Name: "Kroger: Fat Free Sour Cream", Company_Name: "Kroger", Serving_Size: nil, Calories: 20.0, Sat_Fat: 0.0, Sodium: 25.0, Carbs: 3.0, Sugar: 2.0, Fiber: 0.0, Protein: 1.0, Whole_Grain: "N", twenty_cent: nil, Gluten_Free: "Y", Organic: nil, Phosphorus: "N", Soy: "N", Potassium: "60.0", Milk: "Y", Egg: "N", Nut: "N", FODMAP: "HIGH", Additional_Info: nil, product_category_id: 5)
-
 
 

@@ -637,10 +637,17 @@
         0,
         null,
         1,
+<<<<<<< HEAD
         22,
         null,
         1,
         8,
+=======
+        20,
+        null,
+        1,
+        7,
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
         null,
         null,
         1,
@@ -832,14 +839,14 @@
         null,
         null,
         1,
-        2,
-        2,
+        5,
+        5,
         0,
         0,
         0,
         null,
-        2,
-        2,
+        5,
+        5,
         null,
         null,
         null,
@@ -861,7 +868,11 @@
         null,
         1,
         1,
+<<<<<<< HEAD
         8,
+=======
+        7,
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
         0,
         0,
         0,
@@ -875,6 +886,8 @@
         null
       ],
       "/home/ubuntu/workspace/Fork_Friendly_app/app/controllers/application_controller.rb": [
+<<<<<<< HEAD
+=======
         1,
         1,
         1,
@@ -892,6 +905,25 @@
         1,
         1,
         1,
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/Fork_Friendly_app/db/seeds_1.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+<<<<<<< HEAD
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
         1,
         1,
         null,
@@ -908,6 +940,18 @@
         1,
         1,
         1,
+=======
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
         null,
         1,
         1,
@@ -927,7 +971,10 @@
         1,
         1,
         null,
+<<<<<<< HEAD
         null,
+=======
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
         null
       ],
       "/home/ubuntu/workspace/Fork_Friendly_app/app/models/user.rb": [
@@ -936,7 +983,11 @@
         1,
         null,
         1,
+<<<<<<< HEAD
         82,
+=======
+        96,
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
         null,
         1,
         1,
@@ -1033,9 +1084,15 @@
         null,
         1,
         0,
+<<<<<<< HEAD
         0,
         null,
         0,
+=======
+        null,
+        null,
+        null,
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
         0,
         0,
         null,
@@ -1064,11 +1121,19 @@
         1,
         1,
         null,
+<<<<<<< HEAD
         2,
         2,
         2,
         2,
         0,
+=======
+        5,
+        5,
+        5,
+        5,
+        3,
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
         null,
         2,
         null,
@@ -1081,6 +1146,7 @@
         1,
         null,
         1,
+<<<<<<< HEAD
         4,
         2,
         2,
@@ -1096,6 +1162,20 @@
         2,
         2,
         2,
+=======
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
         null,
         0,
         null,
@@ -1104,6 +1184,7 @@
         null,
         null,
         1,
+<<<<<<< HEAD
         4,
         null,
         null,
@@ -1130,22 +1211,43 @@
         1,
         null,
         null,
+=======
+        0,
+        null,
+        null,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
         null,
         null,
         null
       ],
-      "/home/ubuntu/workspace/Fork_Friendly_app/db/seeds.rb": [
+      "/home/ubuntu/workspace/Fork_Friendly_app/app/models/user_cart.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
         null,
         null,
         null,
         null,
-        null,
-        null,
-        null,
-        null,
-        1
+        null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1511058332
+=======
+    "timestamp": 1511056337
+>>>>>>> 211b66e604f3dc3ec49db2e69176d38ea9b3f78e
   }
 }

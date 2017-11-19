@@ -12,7 +12,6 @@ describe HealthConcernsController do
             end
             it 'should redirect to product line page' do
               post :create, params: {:concerns => attributes_for(:health_concern)}
-              #post(:create, params: {:concerns => attributes_for(:health_concern)})
             end
         end
     end
@@ -21,9 +20,24 @@ describe HealthConcernsController do
         context 'Method called post concerns' do
             before do
                load "#{Rails.root}/db/seeds_1.rb"
-               session[:user_id] = 1
+               session[:user_id] = 6
                get(:create, 
                params: {:concerns => {:calorie_friendly => 1, :heart_healthy => 0, :sodium_friendly => 0, :carb_friendly => 0, :kidney_friendly => 0}})
+            end
+            it 'should redirect to product line page' do
+                response.should redirect_to '/product_line'
+            end
+        end
+        context 'Method called post concerns for 2nd time for same user' do
+            before do
+               load "#{Rails.root}/db/seeds_1.rb"
+               session[:user_id] = 6
+               get(:create, 
+               params: {:concerns => {:calorie_friendly => 1, :heart_healthy => 0, :sodium_friendly => 0, :carb_friendly => 0, :kidney_friendly => 0}})
+            end
+            it 'updating the user concerns' do
+               get(:create, 
+               params: {:concerns => {:calorie_friendly => 0, :heart_healthy => 1, :sodium_friendly => 0, :carb_friendly => 0, :kidney_friendly => 0}})
             end
             it 'should redirect to product line page' do
                 response.should redirect_to '/product_line'
