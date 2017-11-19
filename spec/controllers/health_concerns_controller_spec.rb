@@ -245,5 +245,21 @@ describe HealthConcernsController do
         end
     end
     
-    
+     describe 'GET #logged_in_user' do
+        context 'When the user is not logged in' do
+             before do
+               User.destroy_all
+               load "#{Rails.root}/db/seeds.rb"
+               session[:user_id] = nil
+               get(:create, 
+               params: {:concerns => {:calorie_friendly => 1, :heart_healthy => 0, :sodium_friendly => 0, :carb_friendly => 0, :kidney_friendly => 0}})
+            end
+            it 'should redirect flash danger message' do
+                expect(flash[:danger]).to eq "Please log in."
+            end
+            it 'should redirect to login page' do
+                response.should redirect_to login_url
+            end
+        end
+    end
 end
