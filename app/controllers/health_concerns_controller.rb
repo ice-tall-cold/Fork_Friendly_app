@@ -19,11 +19,6 @@ class HealthConcernsController < ApplicationController
     begin
       p_id = params[:compny]
         UserCart.update_cart(current_user.id,p_id.to_i,"true")
-      rescue Exception => e
-        flash[:danger] = e.message
-        redirect_to 'https://google.com/'
-      else
-        flash[:success] = "User Concerns updated"
         redirect_to '/company'
     end   
   end
@@ -34,11 +29,6 @@ class HealthConcernsController < ApplicationController
         user_cart_data = UserCart.where user_id: current_user.id
         item_remove = user_cart_data.find_by product_id: p_id
         item_remove.destroy
-      rescue Exception => e
-        flash[:danger] = e.message
-        redirect_to 'https://google.com/'
-      else
-        flash[:success] = "User Concerns updated"
         redirect_to '/final_cart'
     end
   end
@@ -116,7 +106,7 @@ class HealthConcernsController < ApplicationController
       @Additional_Info =[]
       @id =[]
       len = produt_database.length
-      user_cncern_list = HealthConcern.where user_id: current_user.id
+        user_cncern_list = HealthConcern.where user_id: current_user.id
       if user_cncern_list[0].Calorie_Friendly ==1
         user_cncern = "Calorie_Friendly"
       elsif user_cncern_list[0].Heart_Healthy ==1
@@ -164,25 +154,22 @@ class HealthConcernsController < ApplicationController
   
 
   def concerns
-
   end
   
   def create
     begin
       HealthConcern.update_table(current_user.id,params[:concerns][:calorie_friendly],params[:concerns][:heart_healthy],params[:concerns][:sodium_friendly],params[:concerns][:carb_friendly],params[:concerns][:kidney_friendly])
-    rescue Exception => e
+      rescue Exception => e
       flash[:danger] = e.message
-#      redirect_to chows_new_path                 ##FIXME
       redirect_to 'https://google.com/'
     else
       flash[:success] = "User Concerns updated"
-#      redirect_to chows_index_path               ##FIXME
       redirect_to '/product_line'
     end
   end
   
   def show
-    render health_concerns_concerns_path
+    render 'concerns'
   end
   
   def import
@@ -190,11 +177,9 @@ class HealthConcernsController < ApplicationController
       HealthConcernMap.import(params[:file])
     rescue Exception => e
       flash[:danger] = e.message
-#      redirect_to chows_new_path                 ##FIXME
       redirect_to 'https://google.com/'
     else
       flash[:success] = "File Imported"
-#      redirect_to chows_index_path               ##FIXME
       redirect_to 'https://google.com/'
     end
   end

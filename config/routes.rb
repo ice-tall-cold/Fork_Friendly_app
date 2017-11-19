@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get 'product_line' => 'health_concerns#product_line'
   get 'product_category' => 'health_concerns#product_category'
   get 'company' => 'health_concerns#company'
+  get 'show' => 'health_concerns#show'
   get 'cart'  => 'health_concerns#update_cart'
   get 'final_cart' => 'health_concerns#final_cart'
   get 'return' => 'health_concerns#continue'
