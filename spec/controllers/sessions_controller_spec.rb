@@ -32,17 +32,19 @@ describe SessionsController do
         end
     end
     
-    #describe 'destroy' do
-       # before do
-            #user = User.find_by(email: "willyman_ina_can@mailman.com")
-            #get :destroy, nil, { :user_id => user.id }
-       # end
+    describe 'destroy' do
+        before do
+            User.destroy_all
+            load "#{Rails.root}/db/seeds.rb"
+            user = User.find_by(email: "sankeerth@tamu.edu")
+            get :destroy, params: { :user_id => user.id }
+        end
         
-        #it 'should log you out and redirect' do
-            #expect(session[:user_id]).to eq nil
-            #assigns(:current_user).should == nil
+        it 'should log you out and redirect' do
+            expect(session[:user_id]).to eq nil
+            assigns(:current_user).should == nil
             
-            #response.should redirect_to root_url
-        #end
-    #end
+            response.should redirect_to root_url
+        end
+    end
 end
