@@ -1,13 +1,17 @@
 class HealthConcernsController < ApplicationController
 
-  before_action :logged_in_user, only: [:new, :import,:concerns,:create,:product_line,:product_line_create]
-  before_action :is_admin, only: [:new, :import]
+  before_action :logged_in_user, only: [:new,:index,:import,:concerns,:create,:product_line,:product_line_create]
+  before_action :is_admin, only: [:new, :index, :import]
   @to_remove = []
   def new
 
   end
   
   def product_line
+    
+  end
+  
+  def index
     
   end
   

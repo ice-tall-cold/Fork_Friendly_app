@@ -1,6 +1,6 @@
 class ProductLinesController < ApplicationController
   before_action :logged_in_user, only: [:new, :index, :import, :list, :destroy, :add_to_shoping_list, :return_subs, :return_chows, :concerns]
-  before_action :is_admin, only: [:new, :import, :destroy]
+  before_action :is_admin, only: [:new, :index, :import, :destroy]
   
   def new
     # @user = Chow.new
@@ -10,11 +10,9 @@ class ProductLinesController < ApplicationController
     
   end
   
-  # def concern_list
+  def index
     
-    
-  #   index
-  # end
+  end
   
   
   def import
