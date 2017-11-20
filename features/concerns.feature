@@ -1,14 +1,13 @@
 Feature: Users can select categories
   Background:
     Given the following users exist:
-        | Last_Name | First_Name | Email                   | password      |
-        | admin     | admin      | admin@fork-friendly.com | lindafriendly |
+        | Last_Name | First_Name | Email              | password |
+        | admin     | admin      | sankeerth@tamu.edu | password |
     And I go to the login page
-    And I fill in "Email" with "admin@fork-friendly.com"
-    And I fill in "Password" with "lindafriendly"
+    And I fill in "Email" with "sankeerth@tamu.edu"
+    And I fill in "Password" with "password"
     And I click "log_in_submit"
     And I click "Grocery Shopping"
-    And I go to the health_concerns page
   
   Scenario: Users can choose any preferred dietary considerations in the page
     Given I am on the health_concerns page
