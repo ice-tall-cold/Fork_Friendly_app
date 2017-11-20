@@ -1,5 +1,8 @@
 <h2>Add files to groceries' database </h2>
-
+<div id="top">
+	<%= csrf_meta_tags %>
+    <%= link_to "Log Out", logout_path, method: "delete" %>
+</div>
 <center>
     <%= form_tag import_product_lines_path, multipart: true do %>
         <%= file_field_tag :file, :id =>'Choose File' %>

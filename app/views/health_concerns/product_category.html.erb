@@ -1,8 +1,15 @@
-<%= link_to "My Cart", final_cart_path %></p>
+<div id="topDiv">
+    <h1 class="divText">Product Categories</h1>
+    <%= link_to "My Cart", final_cart_path %></p>
+	<%= csrf_meta_tags %>
+    <%= link_to "Log Out", logout_path, method: "delete" %>
+</div>
+<div id="middleDiv">
 <%= form_tag("/company", method: "get") do %>
     <% @arr.each do |a| %>
     <%= radio_button_tag(:product_category, a.to_s) %>
     <%= label_tag(:product_category, a.to_s) %>      
     <% end %>
 <%= submit_tag("Search") %>
+</div>
 <% end %>

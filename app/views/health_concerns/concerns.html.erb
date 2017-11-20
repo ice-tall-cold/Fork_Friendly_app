@@ -6,6 +6,8 @@
     <div id="topDiv">
       <h1 class="divText">Choose any preferred dietary considerations</h1>
       <%= link_to "My Cart", final_cart_path %></p>
+	    <%= csrf_meta_tags %>
+      <%= link_to "Log Out", logout_path, method: "delete" %>
     </div>
 
     <div id="middleDiv">

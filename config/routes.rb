@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   get 'errors/not_found'
   get 'errors/internal_server_error'
-
+  root 'sessions#home'
   get '/' => 'sessions#home'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
-  
   delete 'logout' => 'sessions#destroy'
 
   get 'signup' => 'users#new'

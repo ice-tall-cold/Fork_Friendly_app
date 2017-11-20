@@ -1,3 +1,10 @@
+<div id="topDiv">
+    <h1 class="divText">My Cart</h1>
+    <%= link_to "My Cart", final_cart_path %></p>
+	<%= csrf_meta_tags %>
+    <%= link_to "Log Out", logout_path, method: "delete" %>
+</div>
+<div id="middleDiv">
 <%= form_tag("/modify_cart", method: "get") do %>
 </div>Shopping Cart</div>
     <% @length.each do |a| %>
@@ -8,4 +15,5 @@
     <div> ______________________________________________________________________________________________ </div>
     <% end %>
 <%= submit_tag("Update cart") %>
+</div>
 <% end %>
