@@ -15,14 +15,30 @@
 
 			</div>
 
-			<div id="middleDiv">
+			<div id="bDiv">
 				<%= form_tag("/company", method: "get") do %>
-				    <% @arr.each do |a| %><br>
-				    <%= radio_button_tag(:product_category, a.to_s) %>
-				    <%= label_tag(:product_category, a.to_s) %>      
-				    <% end %><br>
-				<div id="search"><%= submit_tag("Search") %></div>
+				<div id="categories">
+					
+					
+						
+					    <% @arr.each do |a| %>
+					    <div id="category">
+					    	<div id="categoryContainer">
+					    		<div id="categorSubContainer">
+								    <div id="categoryLabel">
+								    	<%= radio_button_tag(:product_category, a.to_s) %>
+								    	<%= label_tag(:product_category, a.to_s, :class => 'divText') %>
+									</div>
+								</div>
+					    	</div>
+					    </div> 
+					    <% end %> 
+					<div id="search"><%= submit_tag("Search") %></div>
+				</div>
+				<% end %>
 			</div>
-			<% end %>
+			
+
+			<!--<div id="bottomDiv"></div>-->
 
 </div>
