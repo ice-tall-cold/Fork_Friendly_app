@@ -1,0 +1,132 @@
+
+a.visited {
+	text-decoration: none;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+	color: green;
+}
+
+#containerC {
+	/*border: 1px solid red;*/
+	/*height: 4150px;*/
+	height: 900px;
+	min-width:900px;
+	max-width:1800px;
+	margin: 0 auto;
+	/*overflow: hidden;*/
+}
+
+#topDiv {
+	background-image:url(bg.jpg);
+	/*border: 2px solid blue;*/
+}
+
+#navigationBar {
+	border-bottom: 2px solid white;
+	text-align: right;
+	height: 45px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#cart {
+	background-color: green;
+	border: 2px solid white;
+	width: 80px;
+	height: 30px;
+	float: right;
+	text-align: center;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+#logout {
+	background-color: red;
+	border: 2px solid white;
+	width: 80px;
+	height: 30px;
+	float: right;
+	text-align: center;
+	color: red;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+/*----------------------*/
+#bottomDivC{
+	/*border: 2px solid black;*/
+
+	max-height: 100%;
+	min-height: 0px;
+	min-width: 900px;
+	max-width: 1800px;
+	margin: 0 auto;
+	white-space: nowrap;
+	margin-top: 20px;
+}
+
+#spaceDiv {
+	height: 20px;
+}
+
+#products {
+	/*border: 2px solid blue;*/
+	width: 60%;
+	margin: 0 auto;
+}
+
+#product {
+	/*border: 2px solid yellow;*/
+	margin-top: 5px;
+	height: 120px;
+	background-color: orange;
+}
+
+#select {
+	height: 100px;
+	margin-top:5px;
+}
+
+#radioBtnContainer{
+	/*border: 2px solid red;*/
+	height: 40px;
+	width: 40px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 30px;
+}
+
+#radioBtn {
+	/*border: 2px solid blue;*/
+	height: 20px;
+	width: 20px;
+	margin-left: 7px;
+
+}
+
+#productSubContainerF {
+	/*border: 2px solid blue;*/
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 20px;
+
+}
+
+#radioBtnAndLable {
+	/*border: 2px solid red;*/
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+
+.remove {
+	color: white;
+}

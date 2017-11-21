@@ -1,19 +1,53 @@
-<div id="topDiv">
-    <h1 class="divText">My Cart</h1>
-    <%= link_to "My Cart", final_cart_path %></p>
-	<%= csrf_meta_tags %>
-    <%= link_to "Log Out", logout_path, method: "delete" %>
+
+<div id="containerC">
+
+        <!--<div id="topDiv">
+            <h1 class="divText">My Cart</h1>
+            <%= link_to "My Cart", final_cart_path %></p>
+        	<%= csrf_meta_tags %>
+            <%= link_to "Log Out", logout_path, method: "delete" %>
+        </div>-->
+
+            <div id="topDiv">
+                <div id="navigationBar"> 
+                        <div id="cart">
+                            <%= link_to "My Cart", final_cart_path %>
+                        </div>
+                            <%= csrf_meta_tags %>
+                        <div id="logout">
+                            <%= link_to "Log Out", logout_path, method: "delete" %>
+                        </div>
+                    
+                </div>
+                <h1 class="divText">Shopping Cart</h1> 
+
+            </div>
+
+
+        <div id="bottomDivC">
+            <%= form_tag("/modify_cart", method: "get") do %>
+                <div id="products">
+                
+                    <% @length.each do |a| %>
+
+                        <div id="product">
+                            <div id="productSubContainerF">
+                                <p><b>Product</b> : <%= "#{@product[a]}" %></p>
+                                <p><b>Company</b> : <%= "#{@company[a]}" %></p>
+                            </div>
+
+                            <div id="radioBtnAndLable">
+                                <%= radio_button_tag(:compny, @product_id[a]) %>
+                                <%= label_tag(:compny, "Remove", :class=>'remove') %>
+                            </div>
+
+                        </div>
+                    <% end %>
+                    
+                    <div="select"><%= submit_tag("Update Cart") %></div>
+
+                </div>
+            <% end %>
+        </div>
+
 </div>
-<div id="middleDiv">
-<%= form_tag("/modify_cart", method: "get") do %>
-</div>Shopping Cart</div>
-    <% @length.each do |a| %>
-    <div>Product : <%= "#{@product[a]}" %></div>
-    <div>Company_Name : <%= "#{@company[a]}" %></div>
-    <%= radio_button_tag(:compny, @product_id[a]) %>
-    <%= label_tag(:compny, "Remove") %>
-    <div> ______________________________________________________________________________________________ </div>
-    <% end %>
-<%= submit_tag("Update cart") %>
-</div>
-<% end %>
