@@ -1,22 +1,46 @@
-<div id="topDiv">
-    <h1 class="divText">Products</h1>
-    <%= link_to "My Cart", final_cart_path %></p>
-	<%= csrf_meta_tags %>
-    <%= link_to "Log Out", logout_path, method: "delete" %>
+
+<div id="containerC">
+            <!--
+            <div id="topDiv">
+                <h1 class="divText">Products</h1>
+                <%= link_to "My Cart", final_cart_path %></p>
+            	<%= csrf_meta_tags %>
+                <%= link_to "Log Out", logout_path, method: "delete" %>
+            </div>-->
+
+            <div id="topDiv">
+                <div id="navigationBar"> 
+                        <div id="cart">
+                            <%= link_to "My Cart", final_cart_path %>
+                        </div>
+                            <%= csrf_meta_tags %>
+                        <div id="logout">
+                            <%= link_to "Log Out", logout_path, method: "delete" %>
+                        </div>
+                    
+                </div>
+                <h1 class="divText">Products</h1> 
+
+            </div>
+
+
+
+
+            <div id="middleDiv">
+            <%= form_tag("/cart", method: "get") do %>
+                <% @id.each do |a| %>
+                <div>Product : <%= "#{@Name[a]}" %></div>
+                <div>Company_Name : <%= "#{@Company_Name[a]}" %></div>
+                <div>Serving_Size : <%= "#{@Serving_Size[a]}"%>     Calories : <%= "#{@Calories[a]}"%>     Sat_Fat : <%= "#{@Sat_Fat[a]}" %> Sodium : <%= "#{@Sodium[a]}" %>     Carbs : <%= "#{@Carbs[a]}" %>     Sugar : <%= "#{@Sugar[a]}" %></div>
+                <div>Fiber : <%= "#{@Fiber[a]}" %>     Protein : <%= "#{@Protein[a]}" %>     Whole_Grain : <%= "#{@Whole_Grain[a]}" %> Gluten_Free : <%= "#{@Gluten_Free[a]}" %>     Organic : <%= "#{@Organic[a]}" %>     Phosphorus : <%= "#{@Phosphorus[a]}" %> </div>
+                <div>Soy : <%= "#{@Soy[a]}" %>     Potassium : <%= "#{@Potassium[a]}" %>     Milk : <%= "#{@Milk[a]}" %> Egg : <%= "#{@Egg[a]}" %>     Nut : <%= "#{@Nut[a]}" %>     FODMAP : <%= "#{@FODMAP[a]}" %></div>
+                <div>Product Id: <%= "#{@product_id[a]}" %>  Additional_Info : <%= "#{@Additional_Info[a]}" %></div>
+                <%= radio_button_tag(:compny, @product_id[a].to_s) %>
+                <%= label_tag(:compny, "Select") %>  
+                <div> ______________________________________________________________________________________________ </div>
+                <% end %>
+            <%= submit_tag("Search") %>
+            </div>
+            <% end %>
+
 </div>
-<div id="middleDiv">
-<%= form_tag("/cart", method: "get") do %>
-    <% @id.each do |a| %>
-    <div>Product : <%= "#{@Name[a]}" %></div>
-    <div>Company_Name : <%= "#{@Company_Name[a]}" %></div>
-    <div>Serving_Size : <%= "#{@Serving_Size[a]}"%>     Calories : <%= "#{@Calories[a]}"%>     Sat_Fat : <%= "#{@Sat_Fat[a]}" %> Sodium : <%= "#{@Sodium[a]}" %>     Carbs : <%= "#{@Carbs[a]}" %>     Sugar : <%= "#{@Sugar[a]}" %></div>
-    <div>Fiber : <%= "#{@Fiber[a]}" %>     Protein : <%= "#{@Protein[a]}" %>     Whole_Grain : <%= "#{@Whole_Grain[a]}" %> Gluten_Free : <%= "#{@Gluten_Free[a]}" %>     Organic : <%= "#{@Organic[a]}" %>     Phosphorus : <%= "#{@Phosphorus[a]}" %> </div>
-    <div>Soy : <%= "#{@Soy[a]}" %>     Potassium : <%= "#{@Potassium[a]}" %>     Milk : <%= "#{@Milk[a]}" %> Egg : <%= "#{@Egg[a]}" %>     Nut : <%= "#{@Nut[a]}" %>     FODMAP : <%= "#{@FODMAP[a]}" %></div>
-    <div>Product Id: <%= "#{@product_id[a]}" %>  Additional_Info : <%= "#{@Additional_Info[a]}" %></div>
-    <%= radio_button_tag(:compny, @product_id[a].to_s) %>
-    <%= label_tag(:compny, "Select") %>  
-    <div> ______________________________________________________________________________________________ </div>
-    <% end %>
-<%= submit_tag("Search") %>
-</div>
-<% end %>

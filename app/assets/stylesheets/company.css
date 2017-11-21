@@ -1,0 +1,54 @@
+
+a.visited {
+	text-decoration: none;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+#containerC {
+	background-image:url(bg.jpg);
+	/*height: 100%;*/
+	min-width:900px;
+	max-width:1800px;
+	border: 1px solid red;
+	margin: 0 auto;
+}
+
+#topDiv {
+	/*border: 2px solid white;*/
+}
+
+#navigationBar {
+	/*border: 2px solid red;*/
+	border-bottom: 2px solid white;
+	text-align: right;
+	height: 45px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#cart {
+	background-color: green;
+	border: 2px solid white;
+	width: 80px;
+	height: 30px;
+	float: right;
+	text-align: center;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
+#logout {
+	background-color: red;
+	border: 2px solid white;
+	width: 80px;
+	height: 30px;
+	float: right;
+	text-align: center;
+	color: red;
+	margin-top: 5px;
+	margin-right: 5px;
+}
