@@ -1,16 +1,21 @@
 
 
-
 <div id="containerHC">
 
-    <div id="topDiv">
+    <div id="topDivHC">
       <h1 class="divText">Choose any preferred dietary considerations</h1>
-      <%= link_to "My Cart", final_cart_path %></p>
-	    <%= csrf_meta_tags %>
-      <%= link_to "Log Out", logout_path, method: "delete" %>
+      <div id="navigationBar"> 
+      <div id="cart">
+          <%= link_to "My Cart", final_cart_path %>
+      </div>
+          <%= csrf_meta_tags %>
+      <div id="logout">
+          <%= link_to "Log Out", logout_path, method: "delete" %>
+      </div>
+    </div>
     </div>
 
-    <div id="middleDiv">
+    <div id="middleDivHC">
   
               <%= form_for :concerns do |f| %>
 
@@ -105,7 +110,7 @@
     </div>
 
 
-    <div id="bottomDiv"></div>
+    <div id="bottomDivHC"></div>
 </div>
 
 

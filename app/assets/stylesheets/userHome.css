@@ -1,19 +1,16 @@
 
-#container {
+#pageContainer {
 	background-image:url(bg.jpg);
 	height: 100%;
-	min-width:900px;
-	max-width:1800px;
+	background-size: cover;
 	border: 1px solid red;
 	margin: 0 auto;
 }
 
-a {
-	text-decoration: none;
-}
+
 
 #top {
-	height: 300px;
+	height: 400px;
 	margin: 5px;
 	margin: 0 auto;
 }
@@ -37,13 +34,56 @@ a {
 }
 
 #layer2 {
-	border: 5px solid white;
-	height: 400px;
-	width: 400px;
+	border: 5px ;
+	height: 350px;
+	width: 500px;
 	margin: 0 auto;
 	/*background-color: purple;*/
 	/*float: left;*/
 
+}
+
+
+
+.jumbotron {
+  padding-top: 6vw;
+  color: #279e25;
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+}
+
+.jumbotron1 {
+  padding-top: 6vw;
+  color: black;
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+}
+
+.jumbotron1 h3
+{
+    margin-top: 2mm; 
+    margin-bottom: 20mm;
+    font-size: 4.0vw;
+    text-shadow: 1px 1px #BBBBBB;
+    font-family: "Times New Roman", Georgia, Serif;
+}
+
+.jumbotron h3
+{
+    margin-top: 3mm; 
+    margin-bottom: 20mm;
+    font-size: 4.0vw;
+    text-shadow: 1px 1px #BBBBBB;
+    font-family: 'Pacifico', cursive;
+}
+
+.jumbotron h2
+{
+    margin-top: 3mm; 
+    margin-bottom: 20mm;
+    font-size: 3.7vw;
+    text-shadow: 1px 1px #BBBBBB;
+    font-family: 'Pacifico', cursive;
 }
 
 #signup {

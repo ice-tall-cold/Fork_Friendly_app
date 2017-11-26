@@ -15,18 +15,18 @@ p {
 }
 
 #containerC {
-	/*border: 1px solid red;*/
-	/*height: 4150px;*/
-	height: 900px;
-	min-width:900px;
-	max-width:1800px;
+	background-image:url(bg.jpg);
+	height: 100%;
+	background-size: cover;
+	border: 1px solid red;
 	margin: 0 auto;
-	/*overflow: hidden;*/
 }
 
-#topDiv {
-	background-image:url(bg.jpg);
-	/*border: 2px solid blue;*/
+#topDivC {
+	height: 200px;
+	margin: 5px;
+	margin: 0 auto;
+	/*border: 2px solid red;*/
 }
 
 #navigationBar {

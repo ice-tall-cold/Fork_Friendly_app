@@ -1,30 +1,21 @@
 
 <div id="containerC">
-            <!--
-            <div id="topDiv">
-                <h1 class="divText">Products</h1>
-                <%= link_to "My Cart", final_cart_path %></p>
-            	<%= csrf_meta_tags %>
-                <%= link_to "Log Out", logout_path, method: "delete" %>
-            </div>-->
 
-            <div id="topDiv">
+            <div id="topDivC">
+                <h1 class="divText">Product</h1> 
                 <div id="navigationBar"> 
-                        <div id="cart">
-                            <%= link_to "My Cart", final_cart_path %>
-                        </div>
-                            <%= csrf_meta_tags %>
-                        <div id="logout">
-                            <%= link_to "Log Out", logout_path, method: "delete" %>
-                        </div>
-                    
+                <div id="cart">
+                    <%= link_to "My Cart", final_cart_path %>
                 </div>
-                <h1 class="divText">Products</h1> 
+                    <%= csrf_meta_tags %>
+                <div id="logout">
+                    <%= link_to "Log Out", logout_path, method: "delete" %>
+                </div>
+                </div>
+                
 
             </div>
 
-
-            <div id="spaceDiv"><p></p><div>
 
             <div id="bottomDivC">
                 <%= form_tag("/cart", method: "get") do %>
@@ -51,15 +42,18 @@
                                     </p>
                                 </div>
                                 <div id="radioBtnContainer">
-                                    <div id="radioBtn"><%= radio_button_tag(:compny, @product_id[a].to_s) %></div>
+                                    <div id="radioBtn">
+                                    <%= radio_button_tag(:compny, @product_id[a].to_s) %>
+                                    <%= label_tag(:compny, "") %>
+                                    </div>
                                 </div>
-                                <%= label_tag(:compny, "") %> 
+                                 
                             </div> 
                             
                             
                         <% end %>
                         
-                        <div id="select"><%= submit_tag("Select") %><div>
+                        <div="select"><%= submit_tag("Select") %><div>
                     </div>
                 <% end %>
                 

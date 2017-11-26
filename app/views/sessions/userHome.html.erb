@@ -1,9 +1,14 @@
 
 	<div id="container">
-		<div id="top">
-		   <%= csrf_meta_tags %>
-     	   <%= link_to "Log Out", logout_path, method: "delete" %>
-		</div>
+	    <div id="topDivHC">
+	      <div id="navigationBar"> 
+	          <%= csrf_meta_tags %>
+	      <div id="logout">
+	          <%= link_to "Log Out", logout_path, method: "delete" %>
+	      </div>
+	    </div>
+	    </div>
+	    
 		<div id="middle">
 			<!--<div id="layer1"></div>-->
 			<div id="layer2">
