@@ -1,10 +1,13 @@
 
 
 <div id="pageContainer">
-  <div id="topDiv"></div>
-  <div id="middleDiv">
 
-
+  <div id="topdiv"></div>
+  <div id="middlediv">
+      <div class="center jumbotron">
+        <h2>Welcome to Fork Friendly</h2>
+      </div>
+    
     <%= form_for(:session, url: login_path) do |f| %>
     <div id="centerOfPageContainer">
 
@@ -21,11 +24,6 @@
       </div>
 
       <div class="middleCenterDivs" id="centerDiv4">
-        <div id="arrowContainerDiv"> 
-          <p class="divText"> <%= f.submit ">", class: "btn btn-primary", :id => 'log_in_submit' %></p> 
-          <!--<p class="divText">></p>-->
-        </div>
-
         <div id="passwordDiv">
           <%= f.password_field :password, class: 'form-control' %>
         </div>
@@ -34,13 +32,18 @@
       <div class="middleCenterDivs" id="centerDiv5">
         <p>New user? <%= link_to "Sign up now!", signup_path %></p>
       </div>
+      
+      <div class= "button_container"> 
+          <%= f.submit "Log in", class: "btn btn-primary", :id => 'log_in_submit' %> 
+          <!--<p class="divText">></p>-->
+        </div>
 
     </div>
     <% end %>
 
 
   </div>
-  <div id="bottomDiv"></div>
+  <div id="bottomdiv"></div>
 </div>
 
 
@@ -64,6 +67,3 @@
           <p>New user? <%= link_to "Sign up now!", signup_path %></p>
         </div>
       </div>-->
-
-
-

@@ -1,19 +1,18 @@
 <div id="containerPC">
 
-			<div id="topDiv">
-			    <div id="navigationBar"> 
-			    		<div id="cart">
-			    			<%= link_to "My Cart", final_cart_path %>
-			    		</div>
-							<%= csrf_meta_tags %>
-						<div id="logout">
-			    			<%= link_to "Log Out", logout_path, method: "delete" %>
-			    		</div>
-			    	
+			<div id="topDivPC">
+				  <h1 class="divText">Product Categories</h1> 
+			      <div id="navigationBar"> 
+			      <div id="cart">
+			          <%= link_to "My Cart", final_cart_path %>
+			      </div>
+			          <%= csrf_meta_tags %>
+			      <div id="logout">
+			          <%= link_to "Log Out", logout_path, method: "delete" %>
+			      </div>
 			    </div>
-			    <h1 class="divText">Product Categories</h1> 
+			    </div>
 
-			</div>
 
 			<div id="bDiv">
 				<%= form_tag("/company", method: "get") do %>

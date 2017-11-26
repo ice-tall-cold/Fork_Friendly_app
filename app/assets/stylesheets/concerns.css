@@ -2,13 +2,12 @@
 #containerHC {
 	background-image:url(bg.jpg);
 	height: 100%;
-	min-width:900px;
-	max-width:1800px;
+	background-size: cover;
 	border: 1px solid red;
 	margin: 0 auto;
 }
 
-#topDiv {
+#topDivHC {
 	height: 300px;
 	margin: 5px;
 	margin: 0 auto;
@@ -26,7 +25,7 @@ h1.divText {
 	transform: translateY(150%);
 }
 
-#middleDiv, #bottomDiv{
+#middleDivHC, #bottomDivHC{
 	/*border: 2px solid red;*/
 	height: 400px;
 	min-width: 900px;
