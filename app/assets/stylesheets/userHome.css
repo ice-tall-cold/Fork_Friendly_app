@@ -45,13 +45,6 @@
 
 
 
-.jumbotron {
-  padding-top: 6vw;
-  color: #279e25;
-  text-align: center;
-  background-color: rgba(0,0,0,0);
-}
-
 .jumbotron1 {
   padding-top: 6vw;
   color: black;
@@ -77,14 +70,7 @@
     font-family: 'Pacifico', cursive;
 }
 
-.jumbotron h2
-{
-    margin-top: 3mm; 
-    margin-bottom: 20mm;
-    font-size: 3.7vw;
-    text-shadow: 1px 1px #BBBBBB;
-    font-family: 'Pacifico', cursive;
-}
+
 
 #signup {
 	border:2px solid white;
