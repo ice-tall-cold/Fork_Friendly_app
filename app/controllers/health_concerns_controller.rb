@@ -73,6 +73,7 @@ class HealthConcernsController < ApplicationController
         @arr.push( product_catgory[$i].Name.to_s)
         $i+=1
       end
+	  session[:product_category_link] = request.url if request.get?
       render 'product_category'
   end
 
@@ -85,6 +86,7 @@ class HealthConcernsController < ApplicationController
         p_l = session[:product_category]
         p_l_id = p_l["id"]
       end
+	  session[:product_link] = request.url if request.get?
       produt_database=Product.where product_category_id: p_l_id
       @Name=[]
       @product_id =[]
@@ -168,6 +170,7 @@ class HealthConcernsController < ApplicationController
       redirect_to 'https://google.com/'
     else
       flash[:success] = "User Concerns updated"
+	  session[:product_line_link] = '/product_line'
       redirect_to '/product_line'
     end
   end
