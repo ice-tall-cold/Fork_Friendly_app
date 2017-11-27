@@ -31,7 +31,7 @@
 
                         <div id="labelDiv">
                           <%= f.check_box :sodium_friendly, class: "checkbox", id: "ck"%>
-                          <h5>Salt Shy</h5>
+                          <h5>Sodium Friendly</h5>
                         </div>
                         <% end %>
                     </div>
@@ -111,49 +111,4 @@
 
 
     <div id="bottomDivHC"></div>
-</div>
-
-
-<script type="text/javascript">
-  $(document).ready(function(e){
-    $(".img-check").click(function(){
-      $(this).toggleClass("checked");
-    });
-  });
-</script>
-
-bootply::::::
-<div class="col-md-4 col-md-offset-4">
-  <form role="form">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input class="form-control" type="text">
-    </div>
-  
-  <div class="form-horizontal">
-    <div class="form-group">
-      <label class="col-xs-9 control-label">Choice that you prefer</label>
-      <div class="col-xs-3">
-        <select class="form-control select">
-          <option>A</option>
-          <option>B</option>
-        </select>
-      </div>
-    </div>
-    <div class="form-group col-xs-6">
-      <label class="control-label">Another choice</label>
-      <div>
-        <select class="form-control select">
-          <option>very long choice C</option>
-          <option>very long choice D</option>
-        </select>
-      </div>
-    </div>
-  </div>
-
-    <div class="form-group col-xs-6">
-      <label for="name">Address</label>
-      <input class="form-control" type="text">
-    </div>
-  </form>
 </div>
