@@ -63,7 +63,7 @@ p {
 /*----------------------*/
 #bottomDivFC{
 	/*border: 2px solid black;*/
-	height: 1000px;
+	min-height: 1000px;
 	min-width: 900px;
 	max-width: 2800px;
 	margin: 0 auto;
@@ -88,6 +88,12 @@ p {
 }
 
 #select {
+	height: 100px;
+	margin-top:5px;
+}
+
+#spaceBelow {
+	border: 2px solid red;
 	height: 100px;
 	margin-top:5px;
 }

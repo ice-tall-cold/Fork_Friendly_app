@@ -63,14 +63,19 @@ p {
 /*----------------------*/
 #bottomDivC{
 	/*border: 2px solid black;*/
-
+	min-height: 1000px;
+	min-width: 900px;
+	max-width: 2800px;
+	margin: 0 auto;
+	white-space: nowrap;
+	/*
 	max-height: 100%;
 	min-height: 0px;
 	min-width: 900px;
 	max-width: 1800px;
 	margin: 0 auto;
 	white-space: nowrap;
-	margin-top: 20px;
+	margin-top: 20px;*/
 }
 
 #spaceDiv {
