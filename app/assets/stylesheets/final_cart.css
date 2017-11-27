@@ -93,7 +93,7 @@ p {
 }
 
 #spaceBelow {
-	border: 2px solid red;
+	/*border: 2px solid red;*/
 	height: 100px;
 	margin-top:5px;
 }
