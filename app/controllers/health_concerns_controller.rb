@@ -23,6 +23,8 @@ class HealthConcernsController < ApplicationController
     begin
       p_id = params[:compny]
         UserCart.update_cart(current_user.id,p_id.to_i,"true")
+         abc = Product.find_by id: p_id
+        flash[:notice_1] = "Item added to the cart: "+abc.Name
         redirect_to '/company'
     end   
   end
@@ -93,7 +95,7 @@ class HealthConcernsController < ApplicationController
         p_l = session[:product_category]
         p_l_id = p_l["id"]
       end
-	  session[:product_link] = request.url if request.get?
+	    session[:product_link] = request.url if request.get?
       produt_database=Product.where product_category_id: p_l_id
       @Name=[]
       @product_id =[]
@@ -132,9 +134,14 @@ class HealthConcernsController < ApplicationController
         user_cncern = "Kidney_Friendly"
       end
       cncern_map = HealthConcernMap.where product_category_id: p_l_id
-      srt_by = cncern_map[0][user_cncern]
-      concern_acronym = {"LS" => "Sodium","LSF" => "Sat_Fat","Lcal" => "Carbs"}
-      produt = produt_database.sort_by { |k| k[concern_acronym[srt_by]]}
+      if cncern_map[0]==nil
+        flash[:notice_2] = "Warning: Concern map is not present in data base for product category item "+p_l["Name"]
+        produt = produt_database
+      else
+        srt_by = cncern_map[0][user_cncern]
+        concern_acronym = {"LS" => "Sodium","LSF" => "Sat_Fat","Lcal" => "Carbs"}
+        produt = produt_database.sort_by { |k| k[concern_acronym[srt_by]]}
+      end
       $i =0
       while $i < len.to_i do
       @Name.push( produt[$i].Name.to_s)

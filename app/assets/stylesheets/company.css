@@ -82,6 +82,26 @@ p {
 	margin-right: 5px;
 }
 
+#companyalert {
+	font-family: Garamond;
+	font-size: 125%;
+	color: red;
+	margin: 0;
+	text-align: center;
+	top: 30%;
+	transform: translateY(150%);
+}
+
+#itemincart{
+	font-family: Calibri;
+	font-size: 125%;
+	color: white;
+	margin: 0;
+	text-align: center;
+	top: 30%;
+	transform: translateY(150%);
+}
+
 /*----------------------*/
 #bottomDivC{
 	/*border: 2px solid black;*/

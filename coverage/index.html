@@ -14,27 +14,27 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-28T04:05:36+00:00">2017-11-28T04:05:36+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-11-28T08:44:10+00:00">2017-11-28T08:44:10+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">98.56%</span></span>
+    (<span class="covered_percent"><span class="green">98.33%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         9.94
+         9.88
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>56</b> files in total.
-    <b>834</b> relevant lines. 
-    <span class="green"><b>822</b> lines covered</span> and
-    <span class="red"><b>12</b> lines missed </span>
+    <b>839</b> relevant lines. 
+    <span class="green"><b>825</b> lines covered</span> and
+    <span class="red"><b>14</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#5d92c611f9b67a88579c488e31d8cb21fe404414" class="src_link" title="app/controllers/health_concerns_controller.rb">app/controllers/health_concerns_controller.rb</a></td>
-        <td class="green strong">96.86 %</td>
-        <td>214</td>
-        <td>159</td>
-        <td>154</td>
-        <td>5</td>
-        <td>3.3</td>
+        <td class="green strong">95.73 %</td>
+        <td>221</td>
+        <td>164</td>
+        <td>157</td>
+        <td>7</td>
+        <td>3.2</td>
       </tr>
       
       <tr>
@@ -745,11 +745,11 @@
         <div class="source_table" id="5d92c611f9b67a88579c488e31d8cb21fe404414">
   <div class="header">
     <h3>app/controllers/health_concerns_controller.rb</h3>
-    <h4><span class="green">96.86 %</span> covered</h4>
+    <h4><span class="green">95.73 %</span> covered</h4>
     <div>
-      <b>159</b> relevant lines. 
-      <span class="green"><b>154</b> lines covered</span> and
-      <span class="red"><b>5</b> lines missed.</span>
+      <b>164</b> relevant lines. 
+      <span class="green"><b>157</b> lines covered</span> and
+      <span class="red"><b>7</b> lines missed.</span>
     </div>
   </div>
   
@@ -909,1132 +909,1174 @@
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
+          <code class="ruby">         abc = Product.find_by id: p_id</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        flash[:notice_1] = &quot;Item added to the cart: &quot;+abc.Name</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
           <code class="ruby">        redirect_to &#39;/company&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">    end   </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby">    end   </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="30">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="30">
           
-          <code class="ruby">  def modify_cart</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def modify_cart</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
           <code class="ruby">    begin</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="32">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        p_id = params[:compny]</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="33">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        user_cart_data = UserCart.where user_id: current_user.id</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="34">
           <span class="hits">2</span>
           
-          <code class="ruby">        item_remove = user_cart_data.find_by product_id: p_id</code>
+          <code class="ruby">        p_id = params[:compny]</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="35">
           <span class="hits">2</span>
           
+          <code class="ruby">        user_cart_data = UserCart.where user_id: current_user.id</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="36">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        item_remove = user_cart_data.find_by product_id: p_id</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="37">
+          <span class="hits">2</span>
+          
           <code class="ruby">        if item_remove!=nil</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
           <code class="ruby">          item_remove.destroy</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="39">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="38">
+        <li class="covered" data-hits="2" data-linenumber="40">
           <span class="hits">2</span>
           
           <code class="ruby">        redirect_to &#39;/final_cart&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="39">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="40">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="41">
+        <li class="never" data-hits="" data-linenumber="43">
           
           
           <code class="ruby">  </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="42">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def final_cart</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="43">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    product_cart = UserCart.where user_id: current_user.id</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
-          <code class="ruby">    len = product_cart.length</code>
+          <code class="ruby">  def final_cart</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
-          <code class="ruby">    $i =0</code>
+          <code class="ruby">    product_cart = UserCart.where user_id: current_user.id</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
-          <code class="ruby">    $j =0</code>
+          <code class="ruby">    len = product_cart.length</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="47">
           <span class="hits">1</span>
           
-          <code class="ruby">    @arr =[]</code>
+          <code class="ruby">    $i =0</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="48">
           <span class="hits">1</span>
           
-          <code class="ruby">    @product =[]</code>
+          <code class="ruby">    $j =0</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
-          <code class="ruby">    @product_id =[]</code>
+          <code class="ruby">    @arr =[]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="50">
           <span class="hits">1</span>
           
-          <code class="ruby">    @company =[]</code>
+          <code class="ruby">    @product =[]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="51">
           <span class="hits">1</span>
           
-          <code class="ruby">    @length =[]</code>
+          <code class="ruby">    @product_id =[]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="52">
           <span class="hits">1</span>
           
-          <code class="ruby">    while $i &lt; len</code>
+          <code class="ruby">    @company =[]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">     prod_row = Product.where id: product_cart[$i].product_id</code>
+          <code class="ruby">    @length =[]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="54">
           <span class="hits">1</span>
           
-          <code class="ruby">     @arr.push(prod_row[0])</code>
+          <code class="ruby">    while $i &lt; len</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">     $i+=1</code>
+          <code class="ruby">     prod_row = Product.where id: product_cart[$i].product_id</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">     @arr.push(prod_row[0])</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
-          <code class="ruby">    len = product_cart.length</code>
+          <code class="ruby">     $i+=1</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="58">
           
-          <code class="ruby">    while $j &lt; len</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
-          <code class="ruby">      @product.push(@arr[$j].Name)</code>
+          <code class="ruby">    len = product_cart.length</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="60">
           <span class="hits">1</span>
           
-          <code class="ruby">      @company.push(@arr[$j].Company_Name)</code>
+          <code class="ruby">    while $j &lt; len</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
-          <code class="ruby">      @product_id.push(@arr[$j].id.to_i)</code>
+          <code class="ruby">      @product.push(@arr[$j].Name)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="62">
           <span class="hits">1</span>
           
-          <code class="ruby">      @length.push($j)</code>
+          <code class="ruby">      @company.push(@arr[$j].Company_Name)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
-          <code class="ruby">     $j+=1</code>
+          <code class="ruby">      @product_id.push(@arr[$j].id.to_i)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      @length.push($j)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
-          <code class="ruby">    render &#39;final_cart&#39;</code>
+          <code class="ruby">     $j+=1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    render &#39;final_cart&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="never" data-hits="" data-linenumber="69">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="68">
+        <li class="covered" data-hits="1" data-linenumber="70">
           <span class="hits">1</span>
           
           <code class="ruby">  def product_category</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="69">
+        <li class="covered" data-hits="3" data-linenumber="71">
           <span class="hits">3</span>
           
           <code class="ruby">      p_l = ProductLine.find_by Name: params[:product_line]</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="70">
+        <li class="covered" data-hits="3" data-linenumber="72">
           <span class="hits">3</span>
           
           <code class="ruby">      if p_l==nil</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="71">
+        <li class="covered" data-hits="1" data-linenumber="73">
           <span class="hits">1</span>
           
           <code class="ruby">         flash[:notice] = &quot;Data not present in Data base for &quot;+params[:product_line]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="72">
+        <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
           <code class="ruby">         render &#39;product_line&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">      else</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="74">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        product_catgory = ProductCategory.where product_line_id: p_l.id</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="75">
-          <span class="hits">2</span>
-          
-          <code class="ruby">        len = product_catgory.length</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="76">
           <span class="hits">2</span>
           
-          <code class="ruby">        $i =0</code>
+          <code class="ruby">        product_catgory = ProductCategory.where product_line_id: p_l.id</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="77">
           <span class="hits">2</span>
           
-          <code class="ruby">        @arr =[]</code>
+          <code class="ruby">        len = product_catgory.length</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="78">
           <span class="hits">2</span>
           
+          <code class="ruby">        $i =0</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="79">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        @arr =[]</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="80">
+          <span class="hits">2</span>
+          
           <code class="ruby">        while $i &lt; len.to_i do</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="79">
+        <li class="covered" data-hits="10" data-linenumber="81">
           <span class="hits">10</span>
           
           <code class="ruby">          @arr.push( product_catgory[$i].Name.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="80">
+        <li class="covered" data-hits="10" data-linenumber="82">
           <span class="hits">10</span>
           
           <code class="ruby">          $i+=1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="81">
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">        end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="82">
+        <li class="covered" data-hits="2" data-linenumber="84">
           <span class="hits">2</span>
           
           <code class="ruby">	      session[:product_category_link] = request.url if request.get?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="83">
+        <li class="covered" data-hits="2" data-linenumber="85">
           <span class="hits">2</span>
           
           <code class="ruby">        render &#39;product_category&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="84">
+        <li class="never" data-hits="" data-linenumber="86">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="85">
+        <li class="never" data-hits="" data-linenumber="87">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="86">
+        <li class="never" data-hits="" data-linenumber="88">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="89">
           <span class="hits">1</span>
           
           <code class="ruby"> def company</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="88">
+        <li class="covered" data-hits="5" data-linenumber="90">
           <span class="hits">5</span>
           
           <code class="ruby">      if params[:product_category] != nil </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="89">
+        <li class="covered" data-hits="5" data-linenumber="91">
           <span class="hits">5</span>
           
           <code class="ruby">        p_l = ProductCategory.find_by Name: params[:product_category]</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="90">
+        <li class="covered" data-hits="5" data-linenumber="92">
           <span class="hits">5</span>
           
           <code class="ruby">        session[:product_category] = p_l</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="91">
+        <li class="covered" data-hits="5" data-linenumber="93">
           <span class="hits">5</span>
           
           <code class="ruby">        p_l_id = p_l[&quot;id&quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="92">
+        <li class="never" data-hits="" data-linenumber="94">
           
           
           <code class="ruby">      else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="93">
+        <li class="missed" data-hits="0" data-linenumber="95">
           
           
           <code class="ruby">        p_l = session[:product_category]</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="94">
+        <li class="missed" data-hits="0" data-linenumber="96">
           
           
           <code class="ruby">        p_l_id = p_l[&quot;id&quot;]</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="95">
+        <li class="never" data-hits="" data-linenumber="97">
           
           
           <code class="ruby">      end</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="96">
-          <span class="hits">5</span>
-          
-          <code class="ruby">	  session[:product_link] = request.url if request.get?</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="97">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      produt_database=Product.where product_category_id: p_l_id</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="98">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Name=[]</code>
+          <code class="ruby">	    session[:product_link] = request.url if request.get?</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="99">
           <span class="hits">5</span>
           
-          <code class="ruby">      @product_id =[]</code>
+          <code class="ruby">      produt_database=Product.where product_category_id: p_l_id</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="100">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Company_Name =[]</code>
+          <code class="ruby">      @Name=[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="101">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Serving_Size =[]</code>
+          <code class="ruby">      @product_id =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="102">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Calories =[]</code>
+          <code class="ruby">      @Company_Name =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="103">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Sat_Fat =[]</code>
+          <code class="ruby">      @Serving_Size =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="104">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Sodium =[]</code>
+          <code class="ruby">      @Calories =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="105">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Carbs=[]</code>
+          <code class="ruby">      @Sat_Fat =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="106">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Sugar=[]</code>
+          <code class="ruby">      @Sodium =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="107">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Fiber =[]</code>
+          <code class="ruby">      @Carbs=[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="108">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Protein =[]</code>
+          <code class="ruby">      @Sugar=[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="109">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Whole_Grain =[]</code>
+          <code class="ruby">      @Fiber =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="110">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Gluten_Free =[] </code>
+          <code class="ruby">      @Protein =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="111">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Organic =[]</code>
+          <code class="ruby">      @Whole_Grain =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="112">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Phosphorus =[]</code>
+          <code class="ruby">      @Gluten_Free =[] </code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="113">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Soy =[]</code>
+          <code class="ruby">      @Organic =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="114">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Potassium =[]</code>
+          <code class="ruby">      @Phosphorus =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="115">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Milk =[]</code>
+          <code class="ruby">      @Soy =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="116">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Egg =[]</code>
+          <code class="ruby">      @Potassium =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="117">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Nut =[]</code>
+          <code class="ruby">      @Milk =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="118">
           <span class="hits">5</span>
           
-          <code class="ruby">      @FODMAP =[]</code>
+          <code class="ruby">      @Egg =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="119">
           <span class="hits">5</span>
           
-          <code class="ruby">      @Additional_Info =[]</code>
+          <code class="ruby">      @Nut =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="120">
           <span class="hits">5</span>
           
-          <code class="ruby">      @id =[]</code>
+          <code class="ruby">      @FODMAP =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="121">
           <span class="hits">5</span>
           
-          <code class="ruby">      len = produt_database.length</code>
+          <code class="ruby">      @Additional_Info =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="122">
           <span class="hits">5</span>
           
-          <code class="ruby">        user_cncern_list = HealthConcern.where user_id: current_user.id</code>
+          <code class="ruby">      @id =[]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="123">
           <span class="hits">5</span>
           
+          <code class="ruby">      len = produt_database.length</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="124">
+          <span class="hits">5</span>
+          
+          <code class="ruby">        user_cncern_list = HealthConcern.where user_id: current_user.id</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="125">
+          <span class="hits">5</span>
+          
           <code class="ruby">      if user_cncern_list[0].Calorie_Friendly ==1</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="124">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        user_cncern = &quot;Calorie_Friendly&quot;</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="125">
-          <span class="hits">4</span>
-          
-          <code class="ruby">      elsif user_cncern_list[0].Heart_Healthy ==1</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="126">
           <span class="hits">1</span>
           
-          <code class="ruby">        user_cncern = &quot;Heart_Healthy&quot;</code>
+          <code class="ruby">        user_cncern = &quot;Calorie_Friendly&quot;</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="127">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="4" data-linenumber="127">
+          <span class="hits">4</span>
           
-          <code class="ruby">      elsif user_cncern_list[0].Sodium_Friendly ==1</code>
+          <code class="ruby">      elsif user_cncern_list[0].Heart_Healthy ==1</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="128">
           <span class="hits">1</span>
           
-          <code class="ruby">        user_cncern = &quot;Sodium_Friendly&quot;</code>
+          <code class="ruby">        user_cncern = &quot;Heart_Healthy&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="129">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="129">
+          <span class="hits">3</span>
           
-          <code class="ruby">      elsif user_cncern_list[0].Carb_Friendly ==1</code>
+          <code class="ruby">      elsif user_cncern_list[0].Sodium_Friendly ==1</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="130">
           <span class="hits">1</span>
           
-          <code class="ruby">        user_cncern = &quot;Carb_Friendly&quot;</code>
+          <code class="ruby">        user_cncern = &quot;Sodium_Friendly&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="131">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="131">
+          <span class="hits">2</span>
           
-          <code class="ruby">      elsif user_cncern_list[0].Kidney_Friendly ==1</code>
+          <code class="ruby">      elsif user_cncern_list[0].Carb_Friendly ==1</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="132">
           <span class="hits">1</span>
           
+          <code class="ruby">        user_cncern = &quot;Carb_Friendly&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="133">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      elsif user_cncern_list[0].Kidney_Friendly ==1</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="134">
+          <span class="hits">1</span>
+          
           <code class="ruby">        user_cncern = &quot;Kidney_Friendly&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="133">
+        <li class="never" data-hits="" data-linenumber="135">
           
           
           <code class="ruby">      end</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="134">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      cncern_map = HealthConcernMap.where product_category_id: p_l_id</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="135">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      srt_by = cncern_map[0][user_cncern]</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="136">
           <span class="hits">5</span>
           
-          <code class="ruby">      concern_acronym = {&quot;LS&quot; =&gt; &quot;Sodium&quot;,&quot;LSF&quot; =&gt; &quot;Sat_Fat&quot;,&quot;Lcal&quot; =&gt; &quot;Carbs&quot;}</code>
+          <code class="ruby">      cncern_map = HealthConcernMap.where product_category_id: p_l_id</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="137">
+        <li class="covered" data-hits="5" data-linenumber="137">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      if cncern_map[0]==nil</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="138">
+          
+          
+          <code class="ruby">        flash[:notice_2] = &quot;Warning: Concern map is not present in data base for product category item &quot;+p_l[&quot;Name&quot;]</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="139">
+          
+          
+          <code class="ruby">        produt = produt_database</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby">      else</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="141">
+          <span class="hits">5</span>
+          
+          <code class="ruby">        srt_by = cncern_map[0][user_cncern]</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="142">
+          <span class="hits">5</span>
+          
+          <code class="ruby">        concern_acronym = {&quot;LS&quot; =&gt; &quot;Sodium&quot;,&quot;LSF&quot; =&gt; &quot;Sat_Fat&quot;,&quot;Lcal&quot; =&gt; &quot;Carbs&quot;}</code>
+        </li>
+      
+        <li class="covered" data-hits="11" data-linenumber="143">
           <span class="hits">11</span>
           
-          <code class="ruby">      produt = produt_database.sort_by { |k| k[concern_acronym[srt_by]]}</code>
+          <code class="ruby">        produt = produt_database.sort_by { |k| k[concern_acronym[srt_by]]}</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="138">
+        <li class="never" data-hits="" data-linenumber="144">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="145">
           <span class="hits">5</span>
           
           <code class="ruby">      $i =0</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="139">
+        <li class="covered" data-hits="5" data-linenumber="146">
           <span class="hits">5</span>
           
           <code class="ruby">      while $i &lt; len.to_i do</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="140">
+        <li class="covered" data-hits="6" data-linenumber="147">
           <span class="hits">6</span>
           
           <code class="ruby">      @Name.push( produt[$i].Name.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="141">
+        <li class="covered" data-hits="6" data-linenumber="148">
           <span class="hits">6</span>
           
           <code class="ruby">      @Company_Name.push( produt[$i].Company_Name.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="142">
+        <li class="covered" data-hits="6" data-linenumber="149">
           <span class="hits">6</span>
           
           <code class="ruby">      @Serving_Size.push( produt[$i].Serving_Size.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="143">
+        <li class="covered" data-hits="6" data-linenumber="150">
           <span class="hits">6</span>
           
           <code class="ruby">      @Calories.push( produt[$i].Calories.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="144">
+        <li class="covered" data-hits="6" data-linenumber="151">
           <span class="hits">6</span>
           
           <code class="ruby">      @Sat_Fat.push( produt[$i].Sat_Fat.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="145">
+        <li class="covered" data-hits="6" data-linenumber="152">
           <span class="hits">6</span>
           
           <code class="ruby">      @Sodium.push( produt[$i].Sodium.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="146">
+        <li class="covered" data-hits="6" data-linenumber="153">
           <span class="hits">6</span>
           
           <code class="ruby">      @Carbs.push( produt[$i].Carbs.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="147">
+        <li class="covered" data-hits="6" data-linenumber="154">
           <span class="hits">6</span>
           
           <code class="ruby">      @Sugar.push( produt[$i].Sugar.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="148">
+        <li class="covered" data-hits="6" data-linenumber="155">
           <span class="hits">6</span>
           
           <code class="ruby">      @Fiber.push( produt[$i].Fiber.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="149">
+        <li class="covered" data-hits="6" data-linenumber="156">
           <span class="hits">6</span>
           
           <code class="ruby">      @Protein.push( produt[$i].Protein.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="150">
+        <li class="covered" data-hits="6" data-linenumber="157">
           <span class="hits">6</span>
           
           <code class="ruby">      @Whole_Grain.push( produt[$i].Whole_Grain.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="151">
+        <li class="covered" data-hits="6" data-linenumber="158">
           <span class="hits">6</span>
           
           <code class="ruby">      @Gluten_Free.push( produt[$i].Gluten_Free.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="152">
+        <li class="covered" data-hits="6" data-linenumber="159">
           <span class="hits">6</span>
           
           <code class="ruby">      @Organic.push( produt[$i].Organic.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="153">
+        <li class="covered" data-hits="6" data-linenumber="160">
           <span class="hits">6</span>
           
           <code class="ruby">      @Phosphorus.push( produt[$i].Phosphorus.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="154">
+        <li class="covered" data-hits="6" data-linenumber="161">
           <span class="hits">6</span>
           
           <code class="ruby">      @Soy.push( produt[$i].Soy.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="155">
+        <li class="covered" data-hits="6" data-linenumber="162">
           <span class="hits">6</span>
           
           <code class="ruby">      @Potassium.push( produt[$i].Potassium.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="156">
+        <li class="covered" data-hits="6" data-linenumber="163">
           <span class="hits">6</span>
           
           <code class="ruby">      @Milk.push( produt[$i].Milk.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="157">
+        <li class="covered" data-hits="6" data-linenumber="164">
           <span class="hits">6</span>
           
           <code class="ruby">      @Egg.push( produt[$i].Egg.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="158">
+        <li class="covered" data-hits="6" data-linenumber="165">
           <span class="hits">6</span>
           
           <code class="ruby">      @Nut.push( produt[$i].Nut.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="159">
+        <li class="covered" data-hits="6" data-linenumber="166">
           <span class="hits">6</span>
           
           <code class="ruby">      @FODMAP.push( produt[$i].FODMAP.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="160">
+        <li class="covered" data-hits="6" data-linenumber="167">
           <span class="hits">6</span>
           
           <code class="ruby">      @product_id.push(produt[$i].id.to_i)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="161">
+        <li class="covered" data-hits="6" data-linenumber="168">
           <span class="hits">6</span>
           
           <code class="ruby">      @Additional_Info.push( produt[$i].Additional_Info.to_s)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="162">
+        <li class="covered" data-hits="6" data-linenumber="169">
           <span class="hits">6</span>
           
           <code class="ruby">      @id.push($i)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="163">
+        <li class="covered" data-hits="6" data-linenumber="170">
           <span class="hits">6</span>
           
           <code class="ruby">        $i+=1</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="164">
+        <li class="never" data-hits="" data-linenumber="171">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="165">
+        <li class="covered" data-hits="5" data-linenumber="172">
           <span class="hits">5</span>
           
           <code class="ruby">      render &#39;company&#39; </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="166">
+        <li class="never" data-hits="" data-linenumber="173">
           
           
           <code class="ruby"> end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="167">
+        <li class="never" data-hits="" data-linenumber="174">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="168">
+        <li class="never" data-hits="" data-linenumber="175">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="169">
+        <li class="covered" data-hits="1" data-linenumber="176">
           <span class="hits">1</span>
           
           <code class="ruby">  def concerns</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="170">
+        <li class="never" data-hits="" data-linenumber="177">
           
           
           <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="171">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="172">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def create</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="173">
-          <span class="hits">5</span>
-          
-          <code class="ruby">    begin</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="174">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      HealthConcern.update_table(current_user.id,params[:concerns][:calorie_friendly],params[:concerns][:heart_healthy],params[:concerns][:sodium_friendly],params[:concerns][:carb_friendly],params[:concerns][:kidney_friendly])</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="175">
-          
-          
-          <code class="ruby">      rescue Exception =&gt; e</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="176">
-          
-          
-          <code class="ruby">      flash[:danger] = e.message</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="177">
-          
-          
-          <code class="ruby">      redirect_to &#39;https://google.com/&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="178">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="179">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="1" data-linenumber="179">
+          <span class="hits">1</span>
           
-          <code class="ruby">      flash[:success] = &quot;User Concerns updated&quot;</code>
+          <code class="ruby">  def create</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="180">
           <span class="hits">5</span>
           
-          <code class="ruby">	  session[:product_line_link] = &#39;/product_line&#39;</code>
+          <code class="ruby">    begin</code>
         </li>
       
         <li class="covered" data-hits="5" data-linenumber="181">
           <span class="hits">5</span>
           
-          <code class="ruby">      redirect_to &#39;/product_line&#39;</code>
+          <code class="ruby">      HealthConcern.update_table(current_user.id,params[:concerns][:calorie_friendly],params[:concerns][:heart_healthy],params[:concerns][:sodium_friendly],params[:concerns][:carb_friendly],params[:concerns][:kidney_friendly])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="182">
+        <li class="missed" data-hits="0" data-linenumber="182">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      rescue Exception =&gt; e</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="183">
+        <li class="missed" data-hits="0" data-linenumber="183">
           
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="184">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="185">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def show</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="186">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    render &#39;concerns&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="187">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="188">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="189">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def import</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="190">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    begin</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="191">
-          <span class="hits">4</span>
-          
-          <code class="ruby">      HealthConcernMap.import(params[:file])</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="192">
-          <span class="hits">2</span>
-          
-          <code class="ruby">    rescue Exception =&gt; e</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="193">
-          <span class="hits">2</span>
           
           <code class="ruby">      flash[:danger] = e.message</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="194">
-          <span class="hits">2</span>
+        <li class="missed" data-hits="0" data-linenumber="184">
+          
           
           <code class="ruby">      redirect_to &#39;https://google.com/&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="195">
+        <li class="never" data-hits="" data-linenumber="185">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="196">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="186">
+          <span class="hits">5</span>
           
-          <code class="ruby">      flash[:success] = &quot;File Imported&quot;</code>
+          <code class="ruby">      flash[:success] = &quot;User Concerns updated&quot;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="197">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="5" data-linenumber="187">
+          <span class="hits">5</span>
           
-          <code class="ruby">      redirect_to &#39;https://google.com/&#39;</code>
+          <code class="ruby">	  session[:product_line_link] = &#39;/product_line&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="198">
+        <li class="covered" data-hits="5" data-linenumber="188">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      redirect_to &#39;/product_line&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="189">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="199">
+        <li class="never" data-hits="" data-linenumber="190">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="200">
+        <li class="never" data-hits="" data-linenumber="191">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="201">
+        <li class="covered" data-hits="1" data-linenumber="192">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
+          <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="202">
+        <li class="covered" data-hits="1" data-linenumber="193">
           <span class="hits">1</span>
           
-          <code class="ruby">  def logged_in_user</code>
+          <code class="ruby">    render &#39;concerns&#39;</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="203">
-          <span class="hits">13</span>
+        <li class="never" data-hits="" data-linenumber="194">
           
-          <code class="ruby">      unless logged_in?</code>
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="195">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="196">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def import</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="197">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    begin</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="198">
+          <span class="hits">4</span>
+          
+          <code class="ruby">      HealthConcernMap.import(params[:file])</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="199">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    rescue Exception =&gt; e</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="200">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      flash[:danger] = e.message</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="201">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      redirect_to &#39;https://google.com/&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="202">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="203">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      flash[:success] = &quot;File Imported&quot;</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="204">
           <span class="hits">2</span>
           
-          <code class="ruby">        store_location</code>
+          <code class="ruby">      redirect_to &#39;https://google.com/&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="205">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="205">
           
-          <code class="ruby">        flash[:danger] = &quot;Please log in.&quot;</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="206">
-          <span class="hits">2</span>
+        <li class="never" data-hits="" data-linenumber="206">
           
-          <code class="ruby">        redirect_to login_url</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="207">
           
           
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="208">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="209">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def logged_in_user</code>
+        </li>
+      
+        <li class="covered" data-hits="13" data-linenumber="210">
+          <span class="hits">13</span>
+          
+          <code class="ruby">      unless logged_in?</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="211">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        store_location</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="212">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        flash[:danger] = &quot;Please log in.&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="213">
+          <span class="hits">2</span>
+          
+          <code class="ruby">        redirect_to login_url</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="214">
+          
+          
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="208">
+        <li class="never" data-hits="" data-linenumber="215">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="209">
+        <li class="never" data-hits="" data-linenumber="216">
           
           
           <code class="ruby">    </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="210">
+        <li class="covered" data-hits="1" data-linenumber="217">
           <span class="hits">1</span>
           
           <code class="ruby">  def is_admin</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="211">
+        <li class="never" data-hits="" data-linenumber="218">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="212">
+        <li class="covered" data-hits="4" data-linenumber="219">
           <span class="hits">4</span>
           
           <code class="ruby">        redirect_to(root_url) unless current_user.Admin?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="213">
+        <li class="never" data-hits="" data-linenumber="220">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="214">
+        <li class="never" data-hits="" data-linenumber="221">
           
           
           <code class="ruby">end</code>
