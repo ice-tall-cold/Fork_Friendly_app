@@ -11,6 +11,12 @@
                 <div id="logout">
                     <%= link_to "Log Out", logout_path, method: "delete" %>
                 </div>
+                <div id="productcat">
+                    <%= link_to "Product Categories", session[:product_category_link] %>
+                </div>
+                <div id="productline">
+                    <%= link_to "Product Line", session[:product_line_link] %>
+                </div>
                 </div>
                 
 
