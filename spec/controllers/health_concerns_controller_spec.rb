@@ -95,6 +95,16 @@ describe HealthConcernsController do
                 response.should render_template("product_category")
             end
         end
+                context 'Method product_category no product' do
+            before do
+               load "#{Rails.root}/db/seeds.rb"
+               session[:user_id] = 1
+            end
+            it 'post view go to product_category' do
+                get(:product_category, params: {:product_line => "Dairy"})
+                response.should render_template("product_line")
+            end
+        end
     end
     
     describe 'GET #company_1' do
@@ -192,6 +202,16 @@ describe HealthConcernsController do
         context 'Method modify' do
             before do
                load "#{Rails.root}/db/seeds_1.rb"
+               session[:user_id] = 1
+            end
+            it 'get final_cart and render the view' do
+                get(:modify_cart, params:{:compny => 52})
+                response.should redirect_to '/final_cart'
+            end
+        end
+        context 'Method modify Empty cart' do
+            before do
+               load "#{Rails.root}/db/seeds.rb"
                session[:user_id] = 1
             end
             it 'get final_cart and render the view' do

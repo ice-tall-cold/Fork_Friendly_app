@@ -32,7 +32,9 @@ class HealthConcernsController < ApplicationController
         p_id = params[:compny]
         user_cart_data = UserCart.where user_id: current_user.id
         item_remove = user_cart_data.find_by product_id: p_id
-        item_remove.destroy
+        if item_remove!=nil
+          item_remove.destroy
+        end
         redirect_to '/final_cart'
     end
   end
@@ -65,16 +67,21 @@ class HealthConcernsController < ApplicationController
   
   def product_category
       p_l = ProductLine.find_by Name: params[:product_line]
-      product_catgory = ProductCategory.where product_line_id: p_l.id
-      len = product_catgory.length
-      $i =0
-      @arr =[]
-      while $i < len.to_i do
-        @arr.push( product_catgory[$i].Name.to_s)
-        $i+=1
+      if p_l==nil
+         flash[:notice] = "Data not present in Data base for "+params[:product_line]
+         render 'product_line'
+      else
+        product_catgory = ProductCategory.where product_line_id: p_l.id
+        len = product_catgory.length
+        $i =0
+        @arr =[]
+        while $i < len.to_i do
+          @arr.push( product_catgory[$i].Name.to_s)
+          $i+=1
+        end
+	      session[:product_category_link] = request.url if request.get?
+        render 'product_category'
       end
-	  session[:product_category_link] = request.url if request.get?
-      render 'product_category'
   end
 
  def company

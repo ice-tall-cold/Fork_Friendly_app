@@ -24,6 +24,17 @@ h1.divText {
 	transform: translateY(150%);
 }
 
+#notice {
+	font-family: Garamond;
+	font-size: 150%;
+	color: red;
+	position: relative;
+	margin: 0;
+	text-align: center;
+	top: -15%;
+	transform: translateY(150%);
+}
+
 #middleDivPL {
 
 	height: 500px;
