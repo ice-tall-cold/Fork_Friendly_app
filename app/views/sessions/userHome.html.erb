@@ -6,6 +6,14 @@
 	      <div id="logout">
 	          <%= link_to "Log Out", logout_path, method: "delete" %>
 	      </div>
+	      <% if current_user.Admin? %>
+	      	<div id="dataupload">
+	      		<%= link_to "Upload data", product_lines_new_path %>
+	         </div>
+	         <div id="cncrnupload">
+	      		<%= link_to "Upload concerns", health_concerns_new_path %>
+	         </div>
+	        <% end %>
 	    </div>
 	    </div>
 	    

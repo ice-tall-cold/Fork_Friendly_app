@@ -260,7 +260,7 @@ class HealthConcernsController < ApplicationController
       redirect_to 'https://google.com/'
     else
       flash[:success] = "File Imported"
-      redirect_to 'https://google.com/'
+      redirect_to health_concerns_concerns_path
     end
   end
   
