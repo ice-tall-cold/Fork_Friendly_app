@@ -25,6 +25,16 @@ h1.divText {
 	transform: translateY(150%);
 }
 
+#selconcerns {
+	font-family: Garamond;
+	font-size: 125%;
+	color: red;
+	margin: 0;
+	text-align: center;
+	top: 30%;
+	transform: translateY(150%);
+}
+
 #middleDivHC, #bottomDivHC{
 	/*border: 2px solid red;*/
 	height: 400px;

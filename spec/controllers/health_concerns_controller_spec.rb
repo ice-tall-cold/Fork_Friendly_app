@@ -43,6 +43,28 @@ describe HealthConcernsController do
                 response.should redirect_to '/product_line'
             end
         end
+        context 'Method called post concerns with no concern' do
+            before do
+               load "#{Rails.root}/db/seeds.rb"
+               session[:user_id] = 1
+               get(:create, 
+               params: {:concerns => {:calorie_friendly => 0, :heart_healthy => 0, :sodium_friendly => 0, :carb_friendly => 0, :kidney_friendly => 0}})
+            end
+            it 'should redirect to product line page' do
+                response.should render_template ('concerns')
+            end
+        end
+        context 'Method called post concerns with more concern' do
+            before do
+               load "#{Rails.root}/db/seeds.rb"
+               session[:user_id] = 1
+               get(:create, 
+               params: {:concerns => {:calorie_friendly => 1, :heart_healthy => 1, :sodium_friendly => 1, :carb_friendly => 1, :kidney_friendly => 1}})
+            end
+            it 'should redirect to product line page' do
+                response.should render_template ('concerns')
+            end
+        end
     end
     
     describe 'GET #show' do
@@ -95,7 +117,7 @@ describe HealthConcernsController do
                 response.should render_template("product_category")
             end
         end
-                context 'Method product_category no product' do
+        context 'Method product_category no product' do
             before do
                load "#{Rails.root}/db/seeds.rb"
                session[:user_id] = 1
@@ -103,6 +125,16 @@ describe HealthConcernsController do
             it 'post view go to product_category' do
                 get(:product_category, params: {:product_line => "Dairy"})
                 response.should render_template("product_line")
+            end
+        end
+        context 'Method product_category no product select' do
+            before do
+               load "#{Rails.root}/db/seeds.rb"
+               session[:user_id] = 1
+            end
+            it 'post view go to product_category' do
+                get(:product_category, params: {})
+                response.should redirect_to "/product_line"
             end
         end
     end
@@ -157,6 +189,17 @@ describe HealthConcernsController do
                 response.should render_template("company")
             end
         end
+        context 'Method company another time' do
+            before do
+               load "#{Rails.root}/db/seeds_1.rb"
+               session[:user_id] = 4
+               get(:company, params: {:product_category => "Yogurt_3"})
+               get(:company, params: {})
+            end
+            it 'render company view' do
+                response.should render_template("company")
+            end
+        end
     end
     
     describe 'GET #company_5' do
@@ -182,6 +225,7 @@ describe HealthConcernsController do
                get(:update_cart, params:{:compny => 52 }) 
                response.should redirect_to '/company'
             end
+            
         end
     end
  

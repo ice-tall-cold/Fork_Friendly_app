@@ -12,11 +12,11 @@
 			      </div>
 				  <div id="productline">
                     <%= link_to "Product Line", session[:product_line_link] %>
-                  </div>v
+                  </div>
 			    </div>
 			    </div>
 
-
+			<p id="nocategory"><%= flash.now[:notice_4] %></p>
 			<div id="bDiv">
 				<%= form_tag("/company", method: "get") do %>
 				<div id="categories">

@@ -82,6 +82,13 @@ a {
 	white-space: nowrap;
 }
 
+#nocategory {
+	font-family: Garamond;
+	font-size: 125%;
+	color: red;
+	text-align: center;
+}
+
 #search {
 	/*border: 2px solid white;*/
 }

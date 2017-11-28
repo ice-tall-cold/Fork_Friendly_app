@@ -68,9 +68,14 @@ class HealthConcernsController < ApplicationController
   end
   
   def product_category
+      if params[:product_line]==nil
+        flash[:notice] = "Select one of the below products. None selected"
+        redirect_to '/product_line'
+        return
+      end
       p_l = ProductLine.find_by Name: params[:product_line]
       if p_l==nil
-         flash[:notice] = "Data not present in Data base for "+params[:product_line]
+         flash.now[:notice] = "Data not present in Data base for "+params[:product_line]
          render 'product_line'
       else
         product_catgory = ProductCategory.where product_line_id: p_l.id
@@ -82,6 +87,8 @@ class HealthConcernsController < ApplicationController
           $i+=1
         end
 	      session[:product_category_link] = request.url if request.get?
+	      session[:product_category] = nil
+	      session[:product_category_arr] = @arr
         render 'product_category'
       end
   end
@@ -91,6 +98,11 @@ class HealthConcernsController < ApplicationController
         p_l = ProductCategory.find_by Name: params[:product_category]
         session[:product_category] = p_l
         p_l_id = p_l["id"]
+      elsif params[:product_category] == nil and session[:product_category] ==nil
+        flash.now[:notice_4] = "Select one of the following product lines. None selected"
+        @arr = session[:product_category_arr]
+        render 'product_category'
+        return
       else
         p_l = session[:product_category]
         p_l_id = p_l["id"]
@@ -120,6 +132,7 @@ class HealthConcernsController < ApplicationController
       @FODMAP =[]
       @Additional_Info =[]
       @id =[]
+      user_cncern = ""
       len = produt_database.length
         user_cncern_list = HealthConcern.where user_id: current_user.id
       if user_cncern_list[0].Calorie_Friendly ==1
@@ -178,13 +191,59 @@ class HealthConcernsController < ApplicationController
   
   def create
     begin
+      user_concern_flag = 0
+      duplication_error_flag = 0
+      if params[:concerns][:calorie_friendly] == "1"
+        if user_concern_flag==0
+          user_concern_flag = 1
+        else
+          duplication_error_flag = 1
+        end
+      end
+      if params[:concerns][:heart_healthy] == "1"
+        if user_concern_flag==0
+          user_concern_flag = 1
+        else
+          duplication_error_flag = 1
+        end
+      end
+      if params[:concerns][:sodium_friendly] == "1"
+        if user_concern_flag==0
+          user_concern_flag = 1
+        else
+          duplication_error_flag = 1
+        end
+      end
+      if params[:concerns][:carb_friendly] == "1"
+        if user_concern_flag==0
+          user_concern_flag = 1
+        else
+          duplication_error_flag = 1
+        end
+      end
+      if params[:concerns][:kidney_friendly] == "1"
+        if user_concern_flag==0
+          user_concern_flag = 1
+        else
+          duplication_error_flag = 1
+        end
+      end
+      if duplication_error_flag == 1
+        flash.now[:notice_3] = "select any one of the concern. More than one is Selected"
+        render 'concerns'
+        return
+      elsif user_concern_flag==0
+        flash.now[:notice_3] = "select any one of the concern. None is Selected"
+        render 'concerns'
+        return
+      end
       HealthConcern.update_table(current_user.id,params[:concerns][:calorie_friendly],params[:concerns][:heart_healthy],params[:concerns][:sodium_friendly],params[:concerns][:carb_friendly],params[:concerns][:kidney_friendly])
       rescue Exception => e
       flash[:danger] = e.message
       redirect_to 'https://google.com/'
     else
       flash[:success] = "User Concerns updated"
-	  session[:product_line_link] = '/product_line'
+	    session[:product_line_link] = '/product_line'
       redirect_to '/product_line'
     end
   end
