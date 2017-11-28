@@ -13,6 +13,18 @@
 	/*border: 2px solid red;*/
 }
 
+#concernslink {
+	background-color: black;
+	border: 2px solid white;
+	width: 80px;
+	height: 30px;
+	float: right;
+	text-align: center;
+	color: red;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+
 h1.divText {
 	font-family: Garamond;
 	font-size: 200%;

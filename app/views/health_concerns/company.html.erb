@@ -17,6 +17,9 @@
                 <div id="productline">
                     <%= link_to "Product Line", session[:product_line_link] %>
                 </div>
+                <div id="concernslink">
+                    <%= link_to "Concerns", health_concerns_concerns_path %>
+                </div>
                 </div>
                 <p id="itemincart"><%= flash[:notice_1] %></p>
                 <p id="companyalert"><%= flash[:notice_2] %></p>
