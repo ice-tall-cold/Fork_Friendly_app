@@ -143,6 +143,20 @@ input[type=submit] {
 #sign {
 	color: orange;
 }
+#newsubmitButton {
+	height: 50px;
+	width: 400px;
+	margin-left: -50px;
+	margin-top: 50px
+
+}
+
+#ChooseInputFile {
+	width: 400px;
+	margin-left: 50px;
+	margin-top: -50px;
+
+}
 
 
 

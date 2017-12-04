@@ -22,9 +22,13 @@ class HealthConcernsController < ApplicationController
   def update_cart
     begin
       p_id = params[:compny]
+      if p_id !=nil
         UserCart.update_cart(current_user.id,p_id.to_i,"true")
          abc = Product.find_by id: p_id
         flash[:notice_1] = "Item added to the cart: "+abc.Name
+      else
+        flash[:notice_1] = "Select Item to drop in the cart. None Selected"
+      end
         redirect_to '/company'
     end   
   end
@@ -58,10 +62,12 @@ class HealthConcernsController < ApplicationController
     end
     len = product_cart.length
     while $j < len
-      @product.push(@arr[$j].Name)
-      @company.push(@arr[$j].Company_Name)
-      @product_id.push(@arr[$j].id.to_i)
-      @length.push($j)
+      if @arr[$j]!=nil
+        @product.push(@arr[$j].Name)
+        @company.push(@arr[$j].Company_Name)
+        @product_id.push(@arr[$j].id.to_i)
+        @length.push($j)
+      end
      $j+=1
     end
     render 'final_cart'
