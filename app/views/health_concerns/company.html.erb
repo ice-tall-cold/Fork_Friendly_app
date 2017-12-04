@@ -2,7 +2,7 @@
 <div id="containerC">
 
             <div id="topDivC">
-                <h1 class="divText">Product</h1> 
+                <h1 class="divText" id="title">Product</h1> 
                 <div id="navigationBar"> 
                 <div id="cart">
                     <%= link_to "My Cart", final_cart_path %>
@@ -27,20 +27,71 @@
 
             <div id="bottomDivC">
                 <%= form_tag("/cart", method: "get") do %>
-                    <!--<div id="labels">
-                        <div id="nameLabel"><p id="divText">Name Simple Truth Uncured Hardwood Smoked Turkey Bacon (N)</p></div>
-                        <div id="servingSizeLabel"></div>
-                        <div id="caloriesLabel"></div>
-                        <div id="saturatedFatLabel"></div>
-                        <div id="sodiumLabel"></div>
-                        <div id="carbsLabel"></div>
-                        <div id="sugarLabel"></div>
-                        <div id="fiberLabel"></div>
-                        <div id="proteinLabel"></div>
-                    </div>-->
-                    <div id="products">
-                   
+                    <div id="labels">
+                        <div id="nameLabel"><p class="labelText">Name</p></div>
+                        <div id="servingSizeLabel" class="otherLabels"><p class="labelText">Serving Size</p></div>
+                        <div id="caloriesLabel" class="otherLabels"><p class="labelText">Calories</p></div>
+                        <div id="saturatedFatLabel" class="otherLabels"><p class="labelText">Saturated Fat</p></div>
+                        <div id="sodiumLabel" class="otherLabels"><p class="labelText">Sodium</p></div>
+                        <div id="carbsLabel" class="otherLabels"><p class="labelText">Carbohydrates</p></div>
+                        <div id="sugarLabel" class="otherLabels"><p class="labelText">Sugar</p></div>
+                        <div id="fiberLabel" class="otherLabels"><p class="labelText">Fiber</p></div>
+                        <div id="proteinLabel" class="otherLabels"><p class="labelText">Protein</p></div>
+                        <div id="organicLabel" class="otherLabels"><p class="labelText">Organic</p></div>
+                    </div>
 
+                    <!--<div id="products">-->
+                   
+                            <%count = 0%>
+                            <% @id.each do |a| %>
+                                <%if count % 2 == 0%>
+                                    <div id="productT">
+                                        <div id="radioBtnDiv">
+                                            <div id="radioBtnCover">
+                                                <div id="radioBtn">
+                                                    <%= radio_button_tag(:compny, @product_id[a].to_s) %>
+                                                    <%= label_tag(:compny, "") %>  
+                                                </div>  
+                                            </div>                                   
+                                        </div>
+                                        <div id="productName"><p><%= "#{@Name[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Serving_Size[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Calories[a]}"%></p></div>
+                                        <div class="productContents"><p><%= "#{@Sat_Fat[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Sodium[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Carbs[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Sugar[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Fiber[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Protein[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Organic[a]}" %></p></div>
+                                    </div> 
+                                <%else%>
+                                    <div id="productU">
+                                        <div id="radioBtnDiv">
+                                            <div id="radioBtnCover">
+                                                <div id="radioBtn">
+                                                    <%= radio_button_tag(:compny, @product_id[a].to_s) %>
+                                                    <%= label_tag(:compny, "") %>  
+                                                </div>  
+                                            </div>                                   
+                                        </div>
+                                        <div id="productName"><p><%= "#{@Name[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Serving_Size[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Calories[a]}"%></p></div>
+                                        <div class="productContents"><p><%= "#{@Sat_Fat[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Sodium[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Carbs[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Sugar[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Fiber[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Protein[a]}" %></p></div>
+                                        <div class="productContents"><p><%= "#{@Organic[a]}" %></p></div>                  
+                                    </div>
+                                <% end %>
+                                <%count = count + 1%>   
+                            <% end %>
+
+                            <!--
+                    
                             <% @id.each do |a| %>
 
                                 <div id="product">
@@ -67,12 +118,12 @@
                                 </div> 
                                 
                                 
-                            <% end %>
+                            <% end %>-->
 
                         
-                        <div="select"><%= submit_tag("Select") %><div>
+                        <div id="select"><%= submit_tag("Select") %><div>
                         <div id="spaceBelow"></div>
-                    </div>
+                    <!--</div>-->
                 <% end %>
                 
             </div>

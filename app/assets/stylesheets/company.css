@@ -124,28 +124,101 @@ p {
 	height: 20px;
 }
 
+#spaceBelow {
+	/*border: 2px solid blue;*/
+	height: 20px;
+}
+
 
 /*---------------------------------------------------------------*/
+#title {
+	color: white;
+}
 #products {
-	/*border: 2px solid blue;*/
-	width: 60%;
+	border: 2px solid blue;
+	width: 1000px;
 	margin: 0 auto;
 }
 
 #labels {
-	border: 3px solid green;
+	border-top: 3px solid green;
+	border-left: 3px solid green;
+	border-right: 3px solid green;
 	background-color: white;
 	width: 80%;
-	height: 80px;
+	height: 90px;	
 	margin: 0 auto;
 }
 
 #nameLabel {
-	border: 2px solid orange;
-	height:75px;
-	width: 160px;
+	border-right: 3px solid green;
+	height:90px;
+	width: 15%;
 	float: left;
 	white-space: pre-wrap;
+	text-align: center;
+}
+
+.otherLabels {
+	border-right: 3px solid green;
+	height:90px;
+	width: 8.5%;
+	float: left;
+	white-space: pre-wrap;
+	text-align: center;
+}
+
+.labelText {
+	margin-top:25%;
+}
+
+/* make content of the label 90px in height to accommodate "Name"*/
+#productT {
+	border-left: 3px solid green;
+	border-right: 3px solid green;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	background-color: rgb(204, 255, 102);
+	width: 80%;
+	height: 90px;	
+	margin: 0 auto;
+	opacity: 0.8;
+}
+
+#productU {
+	border-left: 3px solid green;
+	border-right: 3px solid green;
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	background-color: white;
+	width: 80%;
+	height: 90px;	
+	margin: 0 auto;
+	opacity: 0.8;
+}
+
+#radioBtnDiv {
+	/*border: 0.1px solid red;*/
+	height:90px;
+	width: 4%;
+	float:left;
+}
+#productName {
+	border-right: 3px solid transparent;
+	height:90px;
+	width: 11%;
+	float: left;
+	white-space: pre-wrap;
+
+}
+
+.productContents {
+	border-right: 3px solid transparent;
+	height:90px;
+	width: 8.5%;
+	float: left;
+	white-space: pre-wrap;
+	text-align: center;
 }
 
 #product {
@@ -156,8 +229,11 @@ p {
 }
 
 #select {
-	height: 100px;
-	margin-top:5px;
+	/*border: 3px solid orange;*/
+	width: 80.4%;
+	height: 110px;
+	margin: 0 auto;
+	/*background-color: orange;*/
 }
 
 #radioBtnContainer{
@@ -170,11 +246,20 @@ p {
 }
 
 #radioBtn {
-	/*border: 2px solid blue;*/
+	/*border: 2px solid grey;*/
 	height: 20px;
 	width: 20px;
-	margin-left: 7px;
+	float: left;
+}
 
+#radioBtnCover {
+	/*border: 2px solid blue;*/
+	height:25px;
+	width:25px;
+	float: left;
+	padding: 0px;
+	float: left;
+	margin-top:20px;
 }
 
 #productSubContainer {
