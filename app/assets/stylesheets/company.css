@@ -124,10 +124,28 @@ p {
 	height: 20px;
 }
 
+
+/*---------------------------------------------------------------*/
 #products {
 	/*border: 2px solid blue;*/
 	width: 60%;
 	margin: 0 auto;
+}
+
+#labels {
+	border: 3px solid green;
+	background-color: white;
+	width: 80%;
+	height: 80px;
+	margin: 0 auto;
+}
+
+#nameLabel {
+	border: 2px solid orange;
+	height:75px;
+	width: 160px;
+	float: left;
+	white-space: pre-wrap;
 }
 
 #product {

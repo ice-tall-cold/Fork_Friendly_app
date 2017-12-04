@@ -55,7 +55,7 @@ h1.divText {
 
 #centerOfPageContainerHC {
 	border: 5px solid white;
-	height: 400px;
+	height: 500px;
 	width: 1050px;
 	margin: 0 auto;
 	/*background-color: purple;*/
@@ -63,25 +63,47 @@ h1.divText {
 
 }
 
+#topConcerns {
+	/*border: 0.5px solid orange;*/
+	height: 180px;
+	width: 1025px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+#bottomConcerns {
+	/*border: 0.5px solid orange;*/
+	height: 180px;
+	width: 850px;
+	margin: 0 auto;
+	/*margin-bottom: 10px;*/
+}
+
 #outerDiv {
-	border: 2px solid transparent;
-	width: 200px;
+	/*border: 2px solid blue;*/
+	width: 160px;
 	height: 150px;
 	float: left;
 	margin-left: 5px; /*is 5px when you add the border*/
-	margin-top: 60px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	position: relative;
 	white-space: nowrap;
 }
-
+/*
 #picOuterDiv {
-	/*border: 2px solid red;*/
+	border: 2px solid red;
 	width: 180px;
 	height: 85px;
 	margin: 0 auto;
-}
+}*/
 
+#picOuterDiv {
+	/*border: 2px solid red;*/
+	width: 85px;
+	height: 85px;
+	margin: 0 auto;
+}
 #picDiv {
 	/*border: 2px solid black;*/
 	width: 80px;
@@ -93,14 +115,19 @@ h1.divText {
 #ck {
 	float: left;
 	margin-top: 25px;
-	margin-right: 25px;
-	margin-left: 25px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+img {
+	max-width:100%;
+	max-height: 100%;
 }
 
 
 #labelDiv {
 	border: 2px solid transparent;
-	width: 180px;
+	width: 120px;
 	height: 60px;
 	margin: 0 auto;
 	color: green;

@@ -27,36 +27,48 @@
 
             <div id="bottomDivC">
                 <%= form_tag("/cart", method: "get") do %>
+                    <!--<div id="labels">
+                        <div id="nameLabel"><p id="divText">Name Simple Truth Uncured Hardwood Smoked Turkey Bacon (N)</p></div>
+                        <div id="servingSizeLabel"></div>
+                        <div id="caloriesLabel"></div>
+                        <div id="saturatedFatLabel"></div>
+                        <div id="sodiumLabel"></div>
+                        <div id="carbsLabel"></div>
+                        <div id="sugarLabel"></div>
+                        <div id="fiberLabel"></div>
+                        <div id="proteinLabel"></div>
+                    </div>-->
                     <div id="products">
-                    
-                        
-                        <% @id.each do |a| %>
+                   
 
-                            <div id="product">
-                                <div id="productSubContainer">
-                                    <p><b>Product : <%= "#{@Name[a]}" %></b></p>
-                                    <p><b>Company : <%= "#{@Company_Name[a]}" %></b></p>
-                                    <p>
-                                        Serving_Size : <%= "#{@Serving_Size[a]}"%>     Calories : <%= "#{@Calories[a]}"%>     Sat_Fat : <%= "#{@Sat_Fat[a]}" %> Sodium : <%= "#{@Sodium[a]}" %>     Carbs : <%= "#{@Carbs[a]}" %>     Sugar : <%= "#{@Sugar[a]}" %>
-                                    </p>
-                                    <p>
-                                        Fiber : <%= "#{@Fiber[a]}" %>     Protein : <%= "#{@Protein[a]}" %>     Whole_Grain : <%= "#{@Whole_Grain[a]}" %> Gluten_Free : <%= "#{@Gluten_Free[a]}" %>     Organic : <%= "#{@Organic[a]}" %>     Phosphorus : <%= "#{@Phosphorus[a]}" %> 
-                                    </p>
-                                    <p>
-                                        Soy : <%= "#{@Soy[a]}" %>     Potassium : <%= "#{@Potassium[a]}" %>     Milk : <%= "#{@Milk[a]}" %> Egg : <%= "#{@Egg[a]}" %>     Nut : <%= "#{@Nut[a]}" %>     FODMAP : <%= "#{@FODMAP[a]}" %>
-                                    </p>
-                                </div>
-                                <div id="radioBtnContainer">
-                                    <div id="radioBtn">
-                                    <%= radio_button_tag(:compny, @product_id[a].to_s) %>
-                                    <%= label_tag(:compny, "") %>
+                            <% @id.each do |a| %>
+
+                                <div id="product">
+                                    <div id="productSubContainer">
+                                        <p><b>Product : <%= "#{@Name[a]}" %></b></p>
+                                        <p><b>Company : <%= "#{@Company_Name[a]}" %></b></p>
+                                        <p>
+                                            Serving_Size : <%= "#{@Serving_Size[a]}"%>     Calories : <%= "#{@Calories[a]}"%>     Sat_Fat : <%= "#{@Sat_Fat[a]}" %> Sodium : <%= "#{@Sodium[a]}" %>     Carbs : <%= "#{@Carbs[a]}" %>     Sugar : <%= "#{@Sugar[a]}" %>
+                                        </p>
+                                        <p>
+                                            Fiber : <%= "#{@Fiber[a]}" %>     Protein : <%= "#{@Protein[a]}" %>     Whole_Grain : <%= "#{@Whole_Grain[a]}" %> Gluten_Free : <%= "#{@Gluten_Free[a]}" %>     Organic : <%= "#{@Organic[a]}" %>     Phosphorus : <%= "#{@Phosphorus[a]}" %> 
+                                        </p>
+                                        <p>
+                                            Soy : <%= "#{@Soy[a]}" %>     Potassium : <%= "#{@Potassium[a]}" %>     Milk : <%= "#{@Milk[a]}" %> Egg : <%= "#{@Egg[a]}" %>     Nut : <%= "#{@Nut[a]}" %>     FODMAP : <%= "#{@FODMAP[a]}" %>
+                                        </p>
                                     </div>
-                                </div>
-                                 
-                            </div> 
-                            
-                            
-                        <% end %>
+                                    <div id="radioBtnContainer">
+                                        <div id="radioBtn">
+                                        <%= radio_button_tag(:compny, @product_id[a].to_s) %>
+                                        <%= label_tag(:compny, "") %>
+                                        </div>
+                                    </div>
+                                     
+                                </div> 
+                                
+                                
+                            <% end %>
+
                         
                         <div="select"><%= submit_tag("Select") %><div>
                         <div id="spaceBelow"></div>

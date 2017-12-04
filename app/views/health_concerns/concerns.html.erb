@@ -21,81 +21,169 @@
 
                   <div id="centerOfPageContainerHC">
 
-                    <div id="outerDiv">
-                      
-                        <div id="picOuterDiv">
-                          <%= f.label :sodium_friendly, "...:", class: "label" do %>
-                          <div id="picDiv"> <img src=<%=image_url('concerns/salt.png')%> alt="..." id="image">  </div>                         
-                          
-                        </div>
+                    <div id="topConcerns">
+                      <div id="outerDiv">
+                        
+                          <div id="picOuterDiv">
+                            <%= f.label :sodium_friendly, "...:", class: "label" do %>
+                            <div id="picDiv"> <img src=<%=image_url('concerns/salt.png')%> alt="..." id="image">  </div>                         
+                            
+                          </div>
 
-                        <div id="labelDiv">
-                          <%= f.check_box :sodium_friendly, class: "checkbox", id: "ck"%>
-                          <h5>Sodium Friendly</h5>
-                        </div>
+                          <div id="labelDiv">
+                            <%= f.check_box :sodium_friendly, class: "checkbox", id: "ck"%>
+                            <h5>Blood Pressure<br>Friendly</h5>
+                          </div>
+                          <% end %>
+                      </div>
+                  
+
+
+                      <div id="outerDiv">
+                        
+                          <div id="picOuterDiv">
+                            <%= f.label :heart_healthy, "...:", class: "label" do %> <!--class: "col-xs-12 control-label btn btn-concerns img-check"-->
+                            <div id="picDiv"><img src=<%=image_url('concerns/Droplet.png')%> alt="..." class="img-responsive"></div>
+                          </div>
+
+                          <div id="labelDiv">
+                            <%= f.check_box :heart_healthy, class: "checkbox", id: "ck" %>  <!-- class: "form-control"-->
+                            <h5>Cholesterol<br>Friendly</h5>
+                          </div>
+                          <% end %>
+                      </div>
+                  
+
+
+
+                      <div id="outerDiv">
+                          <div id="picOuterDiv">
+                            <%= f.label :calorie_friendly, "...:", class: "label" do %>
+                            <div id="picDiv"><img src=<%=image_url('concerns/fork.png')%> alt="..." class="img-responsive"></div>
+                          </div>
+
+                          <div id="labelDiv">
+                            <%= f.check_box :calorie_friendly, class: "checkbox", id: "ck" %>
+                            <h5>Calorie<br>Friendly</h5>
+                          </div>
+                          <% end %>
+                      </div>
+                  
+
+
+                      <div id="outerDiv">
+                        
+                          <div id="picOuterDiv">
+                            <%= f.label :carb_friendly, "...:", class: "label" do %>
+                            <div id="picDiv"><img src=<%=image_url('concerns/F.png')%> alt="..." class="img-responsive"></div>
+                          </div>
+
+                          <div id="labelDiv">
+                            <%= f.check_box :carb_friendly, class: "checkbox", id: "ck" %>
+                            <h5>IBS<br>Friendly</h5>
+                          </div>
+                          <% end %>
+                      </div>
+                  
+
+                      <div id="outerDiv">
+                        
+                          <div id="picOuterDiv">
+                            <%= f.label :kidney_friendly, "...:", class: "label" do %>
+                            <div id="picDiv"><img src=<%=image_url('concerns/renaldisease.png')%> alt="..." class="img-responsive"></div>
+                          </div>
+                          <div id="labelDiv">
+                            <%= f.check_box :kidney_friendly, class: "checkbox", id: "ck" %>
+                            <h5>Kidney<br>Friendly</h5>
+                          </div>
                         <% end %>
-                    </div>
-                
+                      </div>
 
 
-                    <div id="outerDiv">
-                      
-                        <div id="picOuterDiv">
-                          <%= f.label :heart_healthy, "...:", class: "label" do %> <!--class: "col-xs-12 control-label btn btn-concerns img-check"-->
-                          <div id="picDiv"><img src=<%=image_url('concerns/heart.png')%> alt="..." class="img-responsive"></div>
-                        </div>
-
-                        <div id="labelDiv">
-                          <%= f.check_box :heart_healthy, class: "checkbox", id: "ck" %>  <!-- class: "form-control"-->
-                          <h5>Heart Healthy</h5>
-                        </div>
+                      <div id="outerDiv">
+                        
+                          <div id="picOuterDiv">
+                            <%= f.label :diabetes_friendly, "...:", class: "label" do %>
+                            <div id="picDiv"><img src=<%=image_url('concerns/Down.png')%> alt="..." class="img-responsive"></div>
+                          </div>
+                          <div id="labelDiv">
+                            <%= f.check_box :diabetes_friendly, class: "checkbox", id: "ck" %>
+                            <h5>Diabetes<br>Friendly</h5>
+                          </div>
                         <% end %>
+                      </div>
+
                     </div>
-                
 
 
 
-                    <div id="outerDiv">
-                        <div id="picOuterDiv">
-                          <%= f.label :calorie_friendly, "...:", class: "label" do %>
-                          <div id="picDiv"><img src=<%=image_url('concerns/fork.png')%> alt="..." class="img-responsive"></div>
-                        </div>
+                    <div id="bottomConcerns">
 
-                        <div id="labelDiv">
-                          <%= f.check_box :calorie_friendly, class: "checkbox", id: "ck" %>
-                          <h5>Wieght Loss</h5>
-                        </div>
+                      <div id="outerDiv">
+                        
+                          <div id="picOuterDiv">
+                            <%= f.label :gluten_free, "...:", class: "label" do %>
+                            <div id="picDiv"><img src=<%=image_url('concerns/glutenfree.png')%> alt="..." class="img-responsive"></div>
+                          </div>
+                          <div id="labelDiv">
+                            <%= f.check_box :gluten_free, class: "checkbox", id: "ck" %>
+                            <h5>Gluten<br>Free</h5>
+                          </div>
                         <% end %>
-                    </div>
-                
+                      </div>
 
-
-                    <div id="outerDiv">
-                      
-                        <div id="picOuterDiv">
-                          <%= f.label :carb_friendly, "...:", class: "label" do %>
-                          <div id="picDiv"><img src=<%=image_url('concerns/F.png')%> alt="..." class="img-responsive"></div>
-                        </div>
-
-                        <div id="labelDiv">
-                          <%= f.check_box :carb_friendly, class: "checkbox", id: "ck" %>
-                          <h5>FOD Map</h5>
-                        </div>
+                      <div id="outerDiv">
+                        
+                          <div id="picOuterDiv">
+                            <%= f.label :soy_free, "...:", class: "label" do %>
+                            <div id="picDiv"><img src=<%=image_url('concerns/soyfree.png')%> alt="..." class="img-responsive"></div>
+                          </div>
+                          <div id="labelDiv">
+                            <%= f.check_box :soy_free, class: "checkbox", id: "ck" %>
+                            <h5>Soy<br>Free</h5>
+                          </div>
                         <% end %>
-                    </div>
-                
+                      </div>
 
-                    <div id="outerDiv">
-                      
-                        <div id="picOuterDiv">
-                          <%= f.label :kidney_friendly, "...:", class: "label" do %>
-                          <div id="picDiv"><img src=<%=image_url('concerns/Down.png')%> alt="..." class="img-responsive"></div>
-                        </div>
-                        <div id="labelDiv">
-                          <%= f.check_box :kidney_friendly, class: "checkbox", id: "ck" %>
-                          <h5>Kidney Friendly</h5>
-                        </div>
-                      <% end %>
+                        <div id="outerDiv">
+                        
+                          <div id="picOuterDiv">
+                            <%= f.label :dairy_free, "...:", class: "label" do %>
+                            <div id="picDiv"><img src=<%=image_url('concerns/milkfree.png')%> alt="..." class="img-responsive"></div>
+                          </div>
+                          <div id="labelDiv">
+                            <%= f.check_box :dairy_free, class: "checkbox", id: "ck" %>
+                            <h5>Dairy<br>Free</h5>
+                          </div>
+                        <% end %>
+                      </div>
+
+                      <div id="outerDiv">
+                        
+                          <div id="picOuterDiv">
+                            <%= f.label :egg_free, "...:", class: "label" do %>
+                            <div id="picDiv"><img src=<%=image_url('concerns/eggfree.png')%> alt="..." class="img-responsive"></div>
+                          </div>
+                          <div id="labelDiv">
+                            <%= f.check_box :egg_free, class: "checkbox", id: "ck" %>
+                            <h5>Egg<br>Free</h5>
+                          </div>
+                        <% end %>
+                      </div>
+
+                      <div id="outerDiv">
+                        
+                          <div id="picOuterDiv">
+                            <%= f.label :nut_free, "...:", class: "label" do %>
+                            <div id="picDiv"><img src=<%=image_url('concerns/nutfree.png')%> alt="..." class="img-responsive"></div>
+                          </div>
+                          <div id="labelDiv">
+                            <%= f.check_box :nut_free, class: "checkbox", id: "ck" %>
+                            <h5>Nut<br>Free</h5>
+                          </div>
+                        <% end %>
+                      </div>
+
                     </div>
 
                     <div id="startShopping">
