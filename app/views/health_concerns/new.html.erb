@@ -1,13 +1,23 @@
-<div id="topDiv">
-    <h1 class="divText">Add files to health concern diet map' database</h1>
-    <%= link_to "My Cart", final_cart_path %></p>
+<h1 class="divText" class="jumbotron">Add files to health concern diet map</h1>
+<div id="top">
 	<%= csrf_meta_tags %>
-    <%= link_to "Log Out", logout_path, method: "delete" %>
+	<div id="logout">
+        <%= link_to "Log Out", logout_path, method: "delete" %>
+    </div>
+    <div id="concernslink">
+        <%= link_to "Concerns", health_concerns_concerns_path %>
+    </div>
 </div>
+
 <center>
     <%= form_tag import_health_concerns_path, multipart: true do %>
-        <%= file_field_tag :file, :id =>'Choose File' %>
-        <%= submit_tag("Import", :class => 'btn') %>
+        <div id="ChooseInputFile">
+            <%= file_field_tag :file, :id =>'Choose File' %>
+        
+        </div>
+        <div id="startShopping">
+            <%= submit_tag("Import", :class => 'btn btn-primary center col-xs-2 col-xs-offset-5 margin-tb-t', :id => 'newsubmitButton') %>
+        </div>
 <% end %>  
 <br>
 </center>
