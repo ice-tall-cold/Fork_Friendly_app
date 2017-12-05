@@ -1,0 +1,31 @@
+<div id="pageContainer">
+
+  <div id="topdiv"></div>
+  <div id="middlediv">
+      <div class="center jumbotron">
+        <h2>Password Reset</h2>
+      </div>
+    
+    <%= form_tag password_resets_path, :method => :post do %>
+    <div id="centerOfPageContainer">
+
+      <div class="middleCenterDivs"id="centerDiv1">
+        <p = class="divText" id="emailLabel"> <%= label_tag :email %> </p>
+      </div>
+
+      <div class="middleCenterDivs" id="centerDiv2">
+        <%= text_field_tag :email, params[:email], class: 'form-control'%>
+      </div>
+      
+      <div class= "button_container"> 
+          <%= submit_tag "Reset Password", class: "btn btn-primary", :id => 'log_in_submit' %> 
+          <!--<p class="divText">></p>-->
+        </div>
+
+    </div>
+    <% end %>
+
+
+  </div>
+  <div id="bottomdiv"></div>
+</div>

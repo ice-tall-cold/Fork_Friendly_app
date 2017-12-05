@@ -251,6 +251,9 @@
         null,
         1
       ],
+      "/home/ubuntu/workspace/Fork_Friendly_app/config/initializers/devise.rb": [
+        1
+      ],
       "/home/ubuntu/workspace/Fork_Friendly_app/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
@@ -374,6 +377,8 @@
       "/home/ubuntu/workspace/Fork_Friendly_app/config/routes.rb": [
         1,
         1,
+        null,
+        1,
         1,
         1,
         1,
@@ -407,7 +412,7 @@
         1,
         1,
         1,
-        null,
+        1,
         null
       ],
       "/home/ubuntu/workspace/Fork_Friendly_app/app/helpers/application_helper.rb": [
@@ -423,6 +428,10 @@
         null
       ],
       "/home/ubuntu/workspace/Fork_Friendly_app/app/helpers/health_concerns_helper.rb": [
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/Fork_Friendly_app/app/helpers/password_resets_helper.rb": [
         1,
         null
       ],
@@ -844,17 +853,21 @@
         1,
         1,
         null,
-        null,
+        0,
         null,
         1,
         null,
-        2,
-        2,
-        2,
-        2,
+        null,
+        null,
         1,
         null,
         2,
+        2,
+        2,
+        2,
+        1,
+        null,
+        2,
         null,
         null,
         null,
@@ -879,6 +892,8 @@
         1,
         1,
         1,
+        1,
+        null,
         1,
         null,
         1,
@@ -1461,22 +1476,6 @@
       "/home/ubuntu/workspace/Fork_Friendly_app/spec/models/login_spec.rb": [
 
       ],
-      "/home/ubuntu/workspace/Fork_Friendly_app/spec/models/meal_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/Fork_Friendly_app/app/models/meal.rb": [
-        1,
-        null
-      ],
-      "/home/ubuntu/workspace/Fork_Friendly_app/app/models/application_record.rb": [
-        1,
-        1,
-        null
-      ],
       "/home/ubuntu/workspace/Fork_Friendly_app/spec/models/product_category_spec.rb": [
         1,
         null,
@@ -1502,6 +1501,11 @@
       "/home/ubuntu/workspace/Fork_Friendly_app/app/models/product_category.rb": [
         1,
         1,
+        1,
+        1,
+        null
+      ],
+      "/home/ubuntu/workspace/Fork_Friendly_app/app/models/application_record.rb": [
         1,
         1,
         null
@@ -1615,7 +1619,22 @@
         null,
         null,
         1,
+        297,
+        null,
+        145,
+        null,
         1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        144,
+        144,
+        null,
         null
       ],
       "/home/ubuntu/workspace/Fork_Friendly_app/db/seeds_1.rb": [
@@ -1837,6 +1856,6 @@
         1
       ]
     },
-    "timestamp": 1511865043
+    "timestamp": 1512444341
   }
 }

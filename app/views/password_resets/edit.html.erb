@@ -1,0 +1,51 @@
+<div id="pageContainer">
+
+  <div id="topdiv"></div>
+  <div id="middlediv">
+      <div class="center jumbotron">
+        <h2>Password Reset</h2>
+      </div>
+    
+    <%= form_for @user, :url => password_reset_path(params[:id]) do |f| %>
+      <% if @user.errors.any? %>
+        <div class="error_messages">
+          <h2>Form is invalid</h2>
+          <ul>
+            <% for message in @user.errors.full_messages %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    <div id="centerOfPageContainer">
+
+      <div class="middleCenterDivs"id="centerDiv1">
+        <p = class="divText" id="passwordLabel"> <%= f.label :password %> </p>
+      </div>
+
+      <div class="middleCenterDivs" id="centerDiv2">
+        <%= f.password_field :password, class: 'form-control' %>
+      </div>
+
+      <div class="middleCenterDivs" id="centerDiv3">
+        <p = class="divText" id="passwordLabel"> <%= f.label :password_confirmation %> </p>
+      </div>
+
+      <div class="middleCenterDivs" id="centerDiv4">
+        <div id="passwordDiv">
+          <%= f.password_field :password_confirmation, class: 'form-control' %>
+        </div>
+      </div>
+      
+      <div class= "button_container"> 
+          <%= f.submit "Update Password", class: "btn btn-primary", :id => 'log_in_submit' %> 
+          <!--<p class="divText">></p>-->
+        </div>
+
+    </div>
+    <% end %>
+
+
+  </div>
+  <div id="bottomdiv"></div>
+</div>

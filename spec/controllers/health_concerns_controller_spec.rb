@@ -283,7 +283,7 @@ describe HealthConcernsController do
             end
             
             it 'should redirect to the appropriate page' do
-                response.should redirect_to 'https://google.com/'
+                response.should redirect_to health_concerns_concerns_path
             end
         end
         

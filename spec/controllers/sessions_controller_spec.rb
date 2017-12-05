@@ -9,7 +9,7 @@ describe SessionsController do
         context 'when given a valid user' do
            before do
               
-              get :create, params: {:session => {:Email => "sankeerth@tamu.edu", :password => "password" } }
+              get :create, params: {:session => {:Email => "software@tamu.edu", :password => "password" } }
              
             end
            
@@ -36,7 +36,7 @@ describe SessionsController do
         before do
             User.destroy_all
             load "#{Rails.root}/db/seeds.rb"
-            user = User.find_by(email: "sankeerth@tamu.edu")
+            user = User.find_by(email: "software@tamu.edu")
             get :destroy, params: { :user_id => user.id }
         end
         

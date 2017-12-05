@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+
   get 'errors/not_found'
   get 'errors/internal_server_error'
   root 'sessions#home'
@@ -33,5 +35,5 @@ Rails.application.routes.draw do
   get 'final_cart' => 'health_concerns#final_cart'
   get 'return' => 'health_concerns#continue'
   get 'modify_cart' => 'health_concerns#modify_cart'
-
+  resources :password_resets
 end
