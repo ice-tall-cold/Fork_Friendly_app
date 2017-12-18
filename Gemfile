@@ -40,8 +40,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
     gem 'database_cleaner'
     gem 'autotest-rails'
-    gem 'factory_girl_rails', :require => false
-    gem "factory_girl", "~> 4.0"
+    gem 'factory_bot_rails'
     gem 'rspec-rails'
     gem 'rails-controller-testing'
   gem 'cucumber-rails', :require => false

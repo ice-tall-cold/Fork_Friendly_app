@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :health_concern do
     Calorie_Friendly 1
     Heart_Healthy 0

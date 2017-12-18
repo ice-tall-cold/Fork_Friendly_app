@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :user do
       First_Name 'Ashok'
       Last_Name 'kumar'
