@@ -53,7 +53,16 @@ clone your fork:
 ```sh
 $ git clone git@github.com:your_github_username/sankeerth/Fork_Friendly_app.git
 ```
-Then you should run Bundler, to make sure all the app's gems are installed.  Switch to the app's root directory (presumably `Fork_Friendly_app`) and run `bundle install` 
+Then you should run Bundler, to make sure all the app's gems are installed.  Switch to the app's root directory:
+
+```sh
+$ cd Fork_Friendly_app
+```
+and run:
+
+```sh
+$ bundle install
+```
 
 Finally, to get the local database created, run:
 
