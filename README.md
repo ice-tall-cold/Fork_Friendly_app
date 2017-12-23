@@ -42,9 +42,11 @@ database of groceries and health concerns.
 
 ## Forgot Password Feature
   In the Welcome Page, user is given a Forgot Password option to Log In if the user forgets the password with which they have created their account. Once the user clicks the “Forgot Password” Link, it will redirect him to next page to provide the user’s email address. A mail will be sent to the user’s email address with the Link to reset their account password. The user can click the link provided in their mail and can reset with a new password.
-Heroku Link:
+
+## Heroku Link:
 https://fork-friendly-app.herokuapp.com/
 
+## How to modify the code
 If you want to modify the codes in this project, fork this repo to your own GitHub account, and then
 clone your fork:
 
