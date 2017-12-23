@@ -64,7 +64,7 @@ and run:
 $ bundle install
 ```
 
-Finally, to get the local database created, run:
+To get the local database created, run:
 
 ```sh
 $ rake db:migrate
@@ -76,6 +76,19 @@ Now insert "seed data" into the database--initial data items that the app needs 
 $ rake db:seed
 ```
 
+At this point you should be able to run the app locally:
+
+```sh
+$ rails server
+```
+
+And navigating to `http://localhost:8000` in your browser.  
+If you are using Cloud 9, use:
+
+```sh
+$ rails s -p $PORT -b $IP
+```
+And navigate to the link `http://workspacename-username.c9users.io` generated within c9.
 <br />
 
 
