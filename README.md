@@ -49,6 +49,9 @@ https://codeclimate.com/github/ice-tall-cold/Fork_Friendly_app
 ## Heroku Link:
 https://fork-friendly-app.herokuapp.com/
 
+## Test Coverage Report
+![test coverage report](https://user-images.githubusercontent.com/25676398/34634642-adb679be-f24b-11e7-90d2-73e14ea72c58.png)
+
 ## How to modify the code
 If you want to modify the codes in this project, fork this repo to your own GitHub account, and then
 clone your fork:
