@@ -95,6 +95,33 @@ If you are using Cloud 9, use:
 $ rails s -p $PORT -b $IP
 ```
 And navigate to the link `http://workspacename-username.c9users.io` generated within c9.
+
+## Continuous Integration 
+When your teammates update codes to github repo, you need to pull updated project to cloud9:
+
+```sh
+git pull origin master
+```
+
+If you want to push your updates to github from cloud 9:
+First, add a git remote in the Cloud9 console. Should look like this (replace the git url with your repo url):
+
+```sh
+git remote add origin git@github.com:C9Support/testPush.git 
+```
+
+Second, add files and commit them:
+
+```sh
+git add . 
+git commit -m "First commit"
+```
+
+Finally, push to github:
+
+```sh
+git push -u origin master
+```
 <br />
 
 
