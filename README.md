@@ -49,6 +49,9 @@ https://codeclimate.com/github/ice-tall-cold/Fork_Friendly_app
 ## Heroku Link:
 https://fork-friendly-app.herokuapp.com/
 
+## Travis ci Link
+https://travis-ci.org/ice-tall-cold/Fork_Friendly_app
+
 ## Test Coverage Report
 ![test coverage report](https://user-images.githubusercontent.com/25676398/34634642-adb679be-f24b-11e7-90d2-73e14ea72c58.png)
 
